@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/_Scene/Test.unity
+- path: Assets/_Scene/Gym_Jay.unity
   isLoaded: 1
   isActive: 1
