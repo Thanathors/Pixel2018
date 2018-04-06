@@ -19,7 +19,6 @@ public class GameController : MonoBehaviour {
     public static bool endState;
     public float timer = 10f;
     private float ini_timer;
-    private Image timer_Img;
     private Image momentum_Img;
     public static int total_count;
     public static int animal_count;
@@ -35,6 +34,8 @@ public class GameController : MonoBehaviour {
     private Text trivia_text;
     private Text key_text;
     private Text broken_text;
+    private Text timer_text;
+    private Text time_minus;
     private float time_slower = 1f;
     
 
@@ -48,6 +49,7 @@ public class GameController : MonoBehaviour {
         cloth_count = 0;
         trivia_count = 0;
         key_count = 0;
+
     }
 
     // Use this for initialization
@@ -59,38 +61,32 @@ public class GameController : MonoBehaviour {
         key_text = GameObject.Find("Key_Counter").GetComponent<Text>();
         trivia_text = GameObject.Find("Trivia_Counter").GetComponent<Text>();
         broken_text = GameObject.Find("Broken_Counter").GetComponent<Text>();
+        timer_text = GameObject.Find("timer_txt").GetComponent<Text>();
+        time_minus = GameObject.Find("time_minus").GetComponent<Text>();
         momentum_Img = GameObject.Find("Momentum_Counter").GetComponent<Image>();
+        momentum_Img.fillAmount = 0.5f;
+    }
 
-        if (GameObject.Find("Timer_Slider"))
+
+    void Update () {
+        if(timer >= 0)
         {
-            timer_Img = GameObject.Find("Timer_Slider").GetComponent<Image>();
-        }
-        else
-        {
-            Debug.Log("There's no canvas in the scene");
+            timer -= Time.deltaTime;
         }
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        timer -= (Time.deltaTime * time_slower);
-        timer_Img.fillAmount = (timer / ini_timer);
-        if(momentum_Img.fillAmount < .2f)
+        timer_text.text = "Time left :" + Mathf.Round(timer).ToString();
+        momentum_Img.color = new Color((-(momentum_Img.fillAmount) + 1), momentum_Img.fillAmount, 0);
+        if(momentum_Img.fillAmount == 0 && timer > 0)
         {
-            time_slower = 1f;
+            time_minus.text = "-5";
+            time_minus.color = new Color(1, 0, 0);
+            timer -= .07f;
         }
-        else if (momentum_Img.fillAmount >= .2f && momentum_Img.fillAmount >= .5f)
+        else if (momentum_Img.fillAmount > 0)
         {
-            time_slower = 0.8f;
-        }
-        else if (momentum_Img.fillAmount >= .5f && momentum_Img.fillAmount >= .8f)
-        {
-            time_slower = 0.7f;
-        }
-        else if (momentum_Img.fillAmount >= .8f && momentum_Img.fillAmount == 1f)
-        {
-            time_slower = 0.6f;
+            time_minus.text = "-1";
+            time_minus.color = new Color(0, 1, 0);
+            time_slower = 0;
         }
         animal_text.text = "Animal:" + animal_count.ToString();
         wallet_text.text = "Wallet:" + wallet_count.ToString();
