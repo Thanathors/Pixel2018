@@ -20,8 +20,8 @@ public class Animal_AI : MonoBehaviour {
         {
             if (gameObject.transform.parent == null)
             {
-                GetComponent<NavMeshAgent>().destination = Destinations[waypoint].position;
-                GetComponent<NavMeshAgent>().isStopped = false;
+                transform.position = Vector3.MoveTowards(transform.position, Destinations[waypoint].position, 3 * Time.deltaTime);
+                transform.LookAt(Destinations[waypoint].position);
 
                 if (Vector3.Distance(gameObject.transform.position, Destinations[waypoint].position) < 2)
                 {
@@ -31,10 +31,6 @@ public class Animal_AI : MonoBehaviour {
                 {
                     waypoint = 0;
                 }
-            }
-            else
-            {
-                GetComponent<NavMeshAgent>().isStopped = true;
             }
         }
         else
