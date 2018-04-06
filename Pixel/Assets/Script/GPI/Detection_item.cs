@@ -28,6 +28,7 @@ public class Detection_item : MonoBehaviour {
             {
                 GameController.animal_count++;
             }
+            GameController.total_count++;
             other.gameObject.SetActive(false);
         }
     }

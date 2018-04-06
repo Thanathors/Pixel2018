@@ -20,4 +20,13 @@ public class ShatterManager : MonoBehaviour {
             Destroy(gameObject);
         }
 	}
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Item")
+        {
+            isBreakable = true;
+            GameController.broken_item_count++;
+        }
+    }
 }
