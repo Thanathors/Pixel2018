@@ -27,7 +27,6 @@ public class ShatterManager : MonoBehaviour {
         {
             isBreakable = true;
             GameController.broken_item_count++;
-            GameController.total_count++;
         }
     }
 }
