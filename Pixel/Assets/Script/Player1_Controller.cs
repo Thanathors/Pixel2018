@@ -10,15 +10,25 @@ public class Player1_Controller : MonoBehaviour {
     void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    private void Move()
+    {
+        float moveX = GamePad.GetAxis(CAxis.LX);
+        float moveZ = GamePad.GetAxis(CAxis.LY);
+        Rigidbody rb = GetComponent<Rigidbody>();
+        Vector3 movement = new Vector3(moveX, 0f, -moveZ);
+        Debug.Log(movement);
+        rb.AddForce(movement * Speed);
+    }
+
+    // Update is called once per frame
+    void Update () {
         GamePadState state = GamePad.GetState(PlayerIndex.One);
 
         //Right Stick
         if (state.Left.x > 0)
         {
-            Debug.Log("Right stick Axis");
+            Move();
         }
 
         //Button A
@@ -79,15 +89,6 @@ public class Player1_Controller : MonoBehaviour {
         if (state.Pressed(CButton.RS))
         {
             Debug.Log("Right Stick");
-        }
-
-        if (GetComponent<Rigidbody>())
-        {
-            float moveX = GamePad.GetAxis(CAxis.LX);
-            float moveZ = GamePad.GetAxis(CAxis.LY);
-            Rigidbody rb = GetComponent<Rigidbody>();
-            Vector3 movement = new Vector3(moveX, 0f, -moveZ);
-            rb.AddForce(movement * Speed);
         }
     }
 }
