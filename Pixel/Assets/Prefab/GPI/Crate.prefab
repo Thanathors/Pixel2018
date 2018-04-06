@@ -44,7 +44,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!1 &1485590599816714
 GameObject:
@@ -86,7 +86,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!1 &1840410314720548
 GameObject:
@@ -238,10 +238,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1416416963097608}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 0}
@@ -252,10 +252,10 @@ MeshCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1536619479212196}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 0}
@@ -1532,35 +1532,6 @@ MonoBehaviour:
     manualUV: 1
     elementGroup: -1
     textureGroup: -1
-  - _indices: 740000007500000076000000750000007700000076000000
-    _distinctIndices: 74000000750000007600000077000000
-    _edges:
-    - x: 116
-      y: 117
-    - x: 118
-      y: 116
-    - x: 117
-      y: 119
-    - x: 119
-      y: 118
-    _smoothingGroup: 0
-    _uv:
-      useWorldSpace: 0
-      flipU: 0
-      flipV: 0
-      swapUV: 0
-      fill: 1
-      scale: {x: 1, y: 1}
-      offset: {x: 0, y: 0}
-      rotation: 0
-      justify: 0
-      localPivot: {x: 0, y: 0}
-      localSize: {x: 0, y: 0}
-      anchor: 9
-    _mat: {fileID: 2100000, guid: 4a359c7b777b52f4f9c8a43221ce7278, type: 2}
-    manualUV: 1
-    elementGroup: -1
-    textureGroup: -1
   _sharedIndices:
   - array: 000000000d000000490000004c0000005500000058000000620000006f00000070000000
   - array: 0100000004000000390000003c0000004500000048000000630000006600000071000000
@@ -1586,25 +1557,25 @@ MonoBehaviour:
   - array: 1d000000420000004f000000
   - array: 1c0000004300000046000000
   - array: 1f0000004b0000004e000000
-  - array: 600000006d00000076000000
-  - array: 610000006400000077000000
-  - array: 650000006800000075000000
-  - array: 690000006c00000074000000
+  - array: 600000006d000000
+  - array: 6100000064000000
+  - array: 6500000068000000
+  - array: 690000006c000000
   _vertices:
-  - {x: 0, y: 2, z: 1}
-  - {x: 2, y: 2, z: 1}
+  - {x: 0, y: 2.125, z: 1}
+  - {x: 2, y: 2.125, z: 1}
   - {x: 0, y: 3.5, z: 1}
   - {x: 2, y: 4, z: 1}
-  - {x: 2, y: 2, z: 1}
-  - {x: 2, y: 2, z: -2}
+  - {x: 2, y: 2.125, z: 1}
+  - {x: 2, y: 2.125, z: -2}
   - {x: 2, y: 4, z: 1}
   - {x: 2, y: 4, z: -2}
-  - {x: 2, y: 2, z: -2}
-  - {x: 0, y: 2, z: -2}
+  - {x: 2, y: 2.125, z: -2}
+  - {x: 0, y: 2.125, z: -2}
   - {x: 2, y: 4, z: -2}
   - {x: 0, y: 3.5, z: -2}
-  - {x: 0, y: 2, z: -2}
-  - {x: 0, y: 2, z: 1}
+  - {x: 0, y: 2.125, z: -2}
+  - {x: 0, y: 2.125, z: 1}
   - {x: 0, y: 3.5, z: -2}
   - {x: 0, y: 3.5, z: 1}
   - {x: 1.875, y: 3.96875, z: -2}
@@ -1628,14 +1599,14 @@ MonoBehaviour:
   - {x: 2, y: 4, z: -1.875}
   - {x: 0, y: 3.5, z: -1.875}
   - {x: 0, y: 3.5, z: -2}
-  - {x: 0, y: 2, z: -2}
+  - {x: 0, y: 2.125, z: -2}
   - {x: 0, y: 3.5, z: -1.875}
   - {x: 0, y: 2, z: -1.875}
-  - {x: 0, y: 2, z: -2}
-  - {x: 2, y: 2, z: -2}
+  - {x: 0, y: 2.125, z: -2}
+  - {x: 2, y: 2.125, z: -2}
   - {x: 0, y: 2, z: -1.875}
   - {x: 2, y: 2, z: -1.875}
-  - {x: 2, y: 2, z: -2}
+  - {x: 2, y: 2.125, z: -2}
   - {x: 2, y: 4, z: -2}
   - {x: 2, y: 2, z: -1.875}
   - {x: 2, y: 4, z: -1.875}
@@ -1644,14 +1615,14 @@ MonoBehaviour:
   - {x: 1.875, y: 3.96875, z: 1}
   - {x: 1.875, y: 3.96875, z: -2}
   - {x: 2, y: 4, z: -2}
-  - {x: 2, y: 2, z: -2}
+  - {x: 2, y: 2.125, z: -2}
   - {x: 1.875, y: 3.96875, z: -2}
   - {x: 1.875, y: 2, z: -2}
-  - {x: 2, y: 2, z: -2}
-  - {x: 2, y: 2, z: 1}
+  - {x: 2, y: 2.125, z: -2}
+  - {x: 2, y: 2.125, z: 1}
   - {x: 1.875, y: 2, z: -2}
   - {x: 1.875, y: 2, z: 1}
-  - {x: 2, y: 2, z: 1}
+  - {x: 2, y: 2.125, z: 1}
   - {x: 2, y: 4, z: 1}
   - {x: 1.875, y: 2, z: 1}
   - {x: 1.875, y: 3.96875, z: 1}
@@ -1660,14 +1631,14 @@ MonoBehaviour:
   - {x: 0, y: 3.5, z: 0.875}
   - {x: 2, y: 4, z: 0.875}
   - {x: 2, y: 4, z: 1}
-  - {x: 2, y: 2, z: 1}
+  - {x: 2, y: 2.125, z: 1}
   - {x: 2, y: 4, z: 0.875}
   - {x: 2, y: 2, z: 0.875}
-  - {x: 2, y: 2, z: 1}
-  - {x: 0, y: 2, z: 1}
+  - {x: 2, y: 2.125, z: 1}
+  - {x: 0, y: 2.125, z: 1}
   - {x: 2, y: 2, z: 0.875}
   - {x: 0, y: 2, z: 0.875}
-  - {x: 0, y: 2, z: 1}
+  - {x: 0, y: 2.125, z: 1}
   - {x: 0, y: 3.5, z: 1}
   - {x: 0, y: 2, z: 0.875}
   - {x: 0, y: 3.5, z: 0.875}
@@ -1676,41 +1647,37 @@ MonoBehaviour:
   - {x: 0.125, y: 3.53125, z: -2}
   - {x: 0.125, y: 3.53125, z: 1}
   - {x: 0, y: 3.5, z: 1}
-  - {x: 0, y: 2, z: 1}
+  - {x: 0, y: 2.125, z: 1}
   - {x: 0.125, y: 3.53125, z: 1}
   - {x: 0.125, y: 2, z: 1}
-  - {x: 0, y: 2, z: 1}
-  - {x: 0, y: 2, z: -2}
+  - {x: 0, y: 2.125, z: 1}
+  - {x: 0, y: 2.125, z: -2}
   - {x: 0.125, y: 2, z: 1}
   - {x: 0.125, y: 2, z: -2}
-  - {x: 0, y: 2, z: -2}
+  - {x: 0, y: 2.125, z: -2}
   - {x: 0, y: 3.5, z: -2}
   - {x: 0.125, y: 2, z: -2}
   - {x: 0.125, y: 3.53125, z: -2}
+  - {x: 0, y: 2.5, z: 1}
+  - {x: 2, y: 2.5, z: 1}
   - {x: 0, y: 2.125, z: 1}
   - {x: 2, y: 2.125, z: 1}
-  - {x: 0, y: 2, z: 1}
-  - {x: 2, y: 2, z: 1}
+  - {x: 2, y: 2.5, z: 1}
+  - {x: 2, y: 2.5, z: -2}
   - {x: 2, y: 2.125, z: 1}
   - {x: 2, y: 2.125, z: -2}
-  - {x: 2, y: 2, z: 1}
-  - {x: 2, y: 2, z: -2}
+  - {x: 2, y: 2.5, z: -2}
+  - {x: 0, y: 2.5, z: -2}
   - {x: 2, y: 2.125, z: -2}
   - {x: 0, y: 2.125, z: -2}
-  - {x: 2, y: 2, z: -2}
-  - {x: 0, y: 2, z: -2}
+  - {x: 0, y: 2.5, z: -2}
+  - {x: 0, y: 2.5, z: 1}
   - {x: 0, y: 2.125, z: -2}
   - {x: 0, y: 2.125, z: 1}
-  - {x: 0, y: 2, z: -2}
-  - {x: 0, y: 2, z: 1}
-  - {x: 0, y: 2, z: 1}
-  - {x: 2, y: 2, z: 1}
-  - {x: 0, y: 2, z: -2}
-  - {x: 2, y: 2, z: -2}
-  - {x: 0, y: 2.125, z: -2}
-  - {x: 2, y: 2.125, z: -2}
   - {x: 0, y: 2.125, z: 1}
   - {x: 2, y: 2.125, z: 1}
+  - {x: 0, y: 2.125, z: -2}
+  - {x: 2, y: 2.125, z: -2}
   _uv:
   - {x: 0, y: 2}
   - {x: -2, y: 2}
@@ -1828,10 +1795,6 @@ MonoBehaviour:
   - {x: 1, y: 0}
   - {x: -1, y: -3}
   - {x: 1, y: -3}
-  - {x: 1, y: -3}
-  - {x: -1, y: -3}
-  - {x: 1, y: 0}
-  - {x: -1, y: 0}
   _uv3:
   - {x: 0, y: 0, z: 0, w: 0}
   - {x: 0, y: 0, z: 0, w: 0}
@@ -2193,11 +2156,7 @@ MonoBehaviour:
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
   - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  - {r: 1, g: 1, b: 1, a: 1}
-  userCollisions: 0
+  userCollisions: 1
   isSelectable: 1
   unwrapParameters:
     hardAngle: 88
@@ -2206,9 +2165,17 @@ MonoBehaviour:
     areaError: 15
   asset_guid: 
   dontDestroyMeshOnDelete: 0
-  m_selectedFaces: 
-  m_SelectedEdges: []
-  m_selectedTriangles: 
+  m_selectedFaces: 1c000000
+  m_SelectedEdges:
+  - x: 112
+    y: 113
+  - x: 114
+    y: 112
+  - x: 113
+    y: 115
+  - x: 115
+    y: 114
+  m_selectedTriangles: 700000007100000072000000710000007300000072000000
 --- !u!114 &114772189044799972
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -5,26 +5,49 @@ using UnityEngine;
 public class Smash : MonoBehaviour {
 
     Animator m_Anim;
+
+    public float hitRate;
     [ReadOnly]
     public bool breaking;
 
-	void Start ()
+    [ReadOnly]
+    public int mCombo;
+    float nextHit;
+
+    void Start ()
     {
         m_Anim = GetComponent<Animator>();
 	}
-	
-	void Update ()
+
+    void Update()
     {
-        BreakCheck();
-        if (Input.GetKeyUp(KeyCode.Mouse0) && m_Anim.GetBool("Smash") == false)
+        //BreakCheck();
+        Attack();
+    }
+
+    void Attack()
+    {
+        if (Input.GetKeyUp(KeyCode.Mouse0) && Time.time > nextHit && Time.timeScale == 1)
         {
-            m_Anim.SetBool("Smash", true);
+            if (mCombo == 0)
+            {
+                nextHit = Time.time + hitRate;
+                m_Anim.SetTrigger("Smash");
+                mCombo = 1;
+            }
+
+            else if(mCombo == 1)
+            {
+                nextHit = Time.time + hitRate;
+                m_Anim.SetTrigger("Slap");
+                mCombo = 0;
+            }
         }
-	}
+    }
 
     void BreakCheck()
     {
-        if (m_Anim.GetBool("Smash") == true)
+        if (m_Anim.GetBool("Smash") == true || m_Anim.GetBool("Slap") == true)
         {
             breaking = true;
         }
@@ -33,10 +56,5 @@ public class Smash : MonoBehaviour {
         {
             breaking = false;
         }
-    }
-
-    public void SmashToFalse()
-    {
-        m_Anim.SetBool("Smash", false);
     }
 }
