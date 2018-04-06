@@ -28,7 +28,7 @@ public class Item_Pick_Drop : MonoBehaviour {
                 Invoke("Unused_hand", 0.2f);
             }
 
-            if (Vector3.Distance(gameObject.transform.position,item.transform.position) < 5)
+            if (Vector3.Distance(gameObject.transform.position,item.transform.position) <8)
             {
                 RaycastHit hit;
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -39,7 +39,9 @@ public class Item_Pick_Drop : MonoBehaviour {
                         hit.collider.gameObject.GetComponent<Renderer>().material.shader = highlight_shader;
                         if (Input.GetKeyDown(KeyCode.Mouse1) && hand_Used == false)
                         {
-                            item.transform.parent = gameObject.transform;
+                            item.transform.parent = gameObject.transform.GetChild(0).GetChild(0).transform;
+                            item.transform.localRotation = new Quaternion(0, 0, 0, 0);
+                            item.GetComponent<Rigidbody>().isKinematic = true;
                             hand_Used = true;
                         }
                     }
@@ -48,6 +50,11 @@ public class Item_Pick_Drop : MonoBehaviour {
                         item.gameObject.GetComponent<Renderer>().material.shader = base_shader;
                     }
                 }
+            }
+
+            if (item.transform.parent == null)
+            {
+                item.GetComponent<Rigidbody>().isKinematic = false;
             }
         }   
     }

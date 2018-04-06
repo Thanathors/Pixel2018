@@ -15,10 +15,7 @@ public class Item_Manager : MonoBehaviour {
 	void Update () {
         if (gameObject.transform.parent != null)
         {
-            if (gameObject.transform.parent.tag == "Player")
-            {
-                gameObject.transform.position = gameObject.transform.parent.position;
-            }
+            gameObject.transform.position = gameObject.transform.parent.position;
         }
 
 	}
