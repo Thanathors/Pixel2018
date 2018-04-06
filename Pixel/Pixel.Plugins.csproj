@@ -384,6 +384,7 @@
     <None Include="Assets\CarbonInput\Gizmos\readme.txt" />
     <None Include="Assets\CarbonInput\readme.txt" />
     <None Include="Assets\Imports\LowPolyWater_Pack\Shaders\WaterShaded.shader" />
+    <None Include="Assets\Materials\Outline.shader" />
     <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />

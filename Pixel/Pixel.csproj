@@ -327,9 +327,18 @@
     <Compile Include="Assets\CarbonInput\Scripts\TouchInput\TouchMapping.cs" />
     <Compile Include="Assets\CarbonInput\Scripts\TouchInput\TouchStick.cs" />
     <Compile Include="Assets\Imports\LowPolyWater_Pack\Scripts\LowPolyWater.cs" />
+<<<<<<< Updated upstream
     <Compile Include="Assets\Script\Character\Smash.cs" />
     <Compile Include="Assets\Script\General\DestroyAfterTimer.cs" />
     <Compile Include="Assets\Script\GPI\ShatterManager.cs" />
+=======
+    <Compile Include="Assets\Script\Character_Controller.cs" />
+    <Compile Include="Assets\Script\Detection_item.cs" />
+    <Compile Include="Assets\Script\GameController.cs" />
+    <Compile Include="Assets\Script\General\DestroyAfterTimer.cs" />
+    <Compile Include="Assets\Script\Item_Manager.cs" />
+    <Compile Include="Assets\Script\Item_Pick_Drop.cs" />
+>>>>>>> Stashed changes
     <Compile Include="Assets\Script\Player1_Controller.cs" />
     <Compile Include="Assets\Script\ReadOnlyProperty.cs" />
     <Compile Include="Assets\Tools\Cinemachine\Base\Runtime\Behaviours\CinemachineBlendListCamera.cs" />
@@ -431,6 +440,7 @@
     <None Include="Assets\CarbonInput\Gizmos\readme.txt" />
     <None Include="Assets\CarbonInput\readme.txt" />
     <None Include="Assets\Imports\LowPolyWater_Pack\Shaders\WaterShaded.shader" />
+    <None Include="Assets\Materials\Outline.shader" />
     <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
