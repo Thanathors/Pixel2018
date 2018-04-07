@@ -15,9 +15,22 @@ public class ScoreScreen_Controller : MonoBehaviour {
     private int score = 0;
     private Slider slider;
     private Text stormRank;
+    private GameObject hint;
 
     private void Start()
     {
+        if(Main_Menu_Controller.achievements != null)
+        {
+            for (int i = 0; i < Main_Menu_Controller.achievements.Count; i++)
+            {
+                if (Main_Menu_Controller.achievements[i] == true)
+                {
+                    GameObject.Find(i.ToString()).GetComponent<Image>().color = new Color(1, 1, 1, 1);
+                }
+            }
+        }
+        hint = GameObject.Find("Hint");
+        hint.SetActive(false);
         Award_txt = GameObject.Find("Award_text").GetComponent<Text>();
         Award_Des_txt = GameObject.Find("Award_Description").GetComponent<Text>();
         obj_collected_text = GameObject.Find("Object_Collected_text").GetComponent<Text>();
@@ -32,18 +45,18 @@ public class ScoreScreen_Controller : MonoBehaviour {
         obj_collected_text.text = (GameController.total_count).ToString();
         obj_destroyed_text.text = GameController.broken_item_count.ToString();
 
-        if (GameController.total_count == 1)
+        if (GameController.endState == 1)
         {
             award = "To The Point";
             Award_Des_txt.text = "Picked up Wallet and left.";
         }
-        if(GameController.total_count == -1)
+        if(GameController.endState == 2)
         {
             award = "Lost Credibility";
             Award_Des_txt.text = "Took too much time.";
         }
         //script needed
-        if (GameController.total_count == 10000)
+        if (GameController.endState == 3)
         {
             award = "Alternate Exit";
             Award_Des_txt.text = "Exit through a window.";
@@ -129,5 +142,67 @@ public class ScoreScreen_Controller : MonoBehaviour {
         {
             SceneManager.LoadScene(0);
         }
+    }
+
+    public void HintVisible(int i)
+    {
+        string title = "";
+        string text = "";
+        hint.SetActive(true);
+
+        if(i == 0)
+        {
+            title = "Art Storm";
+            text = "Make 6 Paintings Fall.";
+        }
+        if (i == 1)
+        {
+            title = "Strategist";
+            text = "Bring some Chess pieces with you.";
+        }
+        if (i == 2)
+        {
+            title = "Animal Freak";
+            text = "Bring the Cat and Fish with you.";
+        }
+        if (i == 3)
+        {
+            title = "Lights out";
+            text = "Break all the lamps in the house.";
+        }
+        if (i == 4)
+        {
+            title = "Table Flipper";
+            text = "Flip all the tables.";
+        }
+        if (i == 5)
+        {
+            title = "Break the Ice";
+            text = "Break all windows in the house.";
+        }
+        if (i == 6)
+        {
+            title = "Sushi Time";
+            text = "Bring back both fish.";
+        }
+        if (i == 7)
+        {
+            title = "Master of Keys";
+            text = "Bring back all three keys.";
+        }
+        if (i == 9)
+        {
+            title = "Take This!";
+            text = "Break a lot of thing in the house.";
+        }
+        if (i == 12)
+        {
+            title = "In fire!";
+            text = "Have your momentum to it's maximum.";
+        }
+
+
+        hint.transform.GetChild(0).GetComponent<Text>().text = title;
+        hint.transform.GetChild(1).GetComponent<Text>().text = text;
     }
 }

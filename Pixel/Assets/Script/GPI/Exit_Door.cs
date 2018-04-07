@@ -25,15 +25,15 @@ public class Exit_Door : MonoBehaviour {
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                if(GameController.key_count == 0)
+                if(GameController.wallet_count == 0)
                 {
                     pop_up.SetActive(true);
-                    pop_up.transform.GetChild(0).GetComponent<Text>().text = "You need a key!";
+                    pop_up.transform.GetChild(0).GetComponent<Text>().text = "You need your wallet!";
                     Invoke("Pop_up_Disable", 2f);
                 }
                 else
                 {
-                    GameController.endState = true;
+                    GameController.endState = 1;
                 }
             }
         }
