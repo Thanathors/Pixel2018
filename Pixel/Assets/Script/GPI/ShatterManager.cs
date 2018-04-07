@@ -76,4 +76,16 @@ public class ShatterManager : MonoBehaviour {
             GameController.broken_item_count++;
         }
     }
+
+    private void OnDestroy()
+    {
+        if(gameObject.name.Substring(0,5) == "Lampe")
+        {
+            GameController.lamp_count++;
+        }
+        if (gameObject.name.Substring(0,5) == "Windo")
+        {
+            GameController.windows_broken++;
+        }
+    }
 }

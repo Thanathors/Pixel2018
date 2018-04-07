@@ -23,10 +23,24 @@ public class Detection_item : MonoBehaviour {
             if (other.gameObject.GetComponent<Item_Manager>().category == ItemList.Trivia)
             {
                 GameController.trivia_count++;
+                if (other.gameObject.name.Substring(0,5) == "Chess")
+                {
+                    GameController.chess_count++;
+                    
+                }
             }
             if (other.gameObject.GetComponent<Item_Manager>().category == ItemList.Animal)
             {
                 GameController.animal_count++;
+                if(other.name == "Fish")
+                {
+                    GameController.fish_count++;
+                    Debug.Log(GameController.fish_count);
+                }
+                else
+                {
+                    GameController.cat_count++;
+                }
             }
             GameController.total_count++;
             other.gameObject.SetActive(false);

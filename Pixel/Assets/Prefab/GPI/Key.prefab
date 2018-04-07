@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 114403070270031090}
   - component: {fileID: 54591860100422240}
   - component: {fileID: 65675631813748340}
+  - component: {fileID: 114384445882004504}
   m_Layer: 0
   m_Name: Key
   m_TagString: Item
@@ -1376,7 +1377,7 @@ MonoBehaviour:
   m_selectedTriangles: 
 --- !u!114 &114384445882004504
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1743662961913658}

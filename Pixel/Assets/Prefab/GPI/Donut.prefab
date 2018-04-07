@@ -26,6 +26,8 @@ GameObject:
   - component: {fileID: 54840488969655982}
   - component: {fileID: 65443626044403206}
   - component: {fileID: 114021772480259372}
+  - component: {fileID: 65698616935917328}
+  - component: {fileID: 114306721650715320}
   m_Layer: 0
   m_Name: Donut
   m_TagString: Item
@@ -116,7 +118,7 @@ BoxCollider:
   m_Center: {x: -1, y: 0, z: 0}
 --- !u!65 &65698616935917328
 BoxCollider:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1417555791530924}
@@ -233,7 +235,7 @@ MonoBehaviour:
   _entityType: 0
 --- !u!114 &114306721650715320
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1417555791530924}
