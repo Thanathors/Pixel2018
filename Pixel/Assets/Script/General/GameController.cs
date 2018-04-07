@@ -112,6 +112,11 @@ public class GameController : MonoBehaviour {
             momentum_Img.fillAmount -= 0.001f;
         }
         AchievementChecker();
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseGame();
+        }
         timer_text.text = "Time Left:" + Mathf.Round(timer).ToString();
         momentum_Img.color = new Color((-(momentum_Img.fillAmount) + 1), momentum_Img.fillAmount, 0);
 
@@ -154,6 +159,11 @@ public class GameController : MonoBehaviour {
             Invoke("Score", 1f);
         }      
     }
+    void PauseGame()
+    {
+
+    }
+
 
     void Score()
     {

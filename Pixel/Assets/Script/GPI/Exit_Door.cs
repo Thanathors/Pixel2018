@@ -46,6 +46,7 @@ public class Exit_Door : MonoBehaviour {
             if(other.gameObject.GetComponent<Item_Manager>().category == ItemList.Key)
             {
                 GameController.key_count++;
+                other.gameObject.SetActive(false);
                 Destroy(gameObject);
             }
         }
