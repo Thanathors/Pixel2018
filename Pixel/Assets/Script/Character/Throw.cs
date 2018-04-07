@@ -9,8 +9,11 @@ public class Throw : MonoBehaviour {
     [HideInInspector]
     public bool animated = false;
     private GameObject dir;
+    [Range(0, 30)]
+    public float ThrowForce;
 
-	void Start ()
+
+    void Start ()
     {
         dir = GameObject.Find("ThrowDirection");
         m_Anim = GetComponent<Animator>();
@@ -33,7 +36,7 @@ public class Throw : MonoBehaviour {
             item = gameObject.transform.GetChild(0).GetChild(0).GetChild(0).gameObject;
             item.GetComponent<Rigidbody>().isKinematic = false;
             item.gameObject.transform.parent = null;
-            item.GetComponent<Rigidbody>().AddForce((Camera.main.transform.forward) * 17.5f, ForceMode.Impulse);
+            item.GetComponent<Rigidbody>().AddForce((Camera.main.transform.forward) * ThrowForce, ForceMode.Impulse);
         }
 
         animated = false;

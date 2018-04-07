@@ -14,6 +14,7 @@ public class Item_Manager : MonoBehaviour {
         player = GameObject.FindGameObjectWithTag("Player");
         base_shader = Shader.Find("Standard");
         highlight_shader = Shader.Find("Outlined/Silhouetted Diffuse");
+        GetComponent<Rigidbody>().collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;
     }
 
     void Update()

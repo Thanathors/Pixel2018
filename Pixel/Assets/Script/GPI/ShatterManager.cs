@@ -6,6 +6,8 @@ public class ShatterManager : MonoBehaviour {
 
     public bool isBreakable;
     public GameObject shatteredObject;
+    [ReadOnly]
+    public float speed;
 
 	void Start ()
     {
@@ -23,9 +25,8 @@ public class ShatterManager : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        Debug.Log(GetComponent<Rigidbody>().velocity);
-
         GameObject player = GameObject.FindGameObjectWithTag("Player");
+        speed = GetComponent<Rigidbody>().velocity.magnitude;
 
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -50,8 +51,10 @@ public class ShatterManager : MonoBehaviour {
             GameController.broken_item_count++;
         }
 
-        //if(GetComponent<Rigidbody>().velocity.magnitude == 10f)
-        //{
-        //}
+        if (speed > 10f)
+        {
+            isBreakable = true;
+            GameController.broken_item_count++;
+        }
     }
 }
