@@ -27,7 +27,7 @@ public class Item_Manager : MonoBehaviour {
             gameObject.transform.gameObject.GetComponent<Renderer>().material.shader = base_shader;
         }
 
-        if (gameObject.transform.parent != null && gameObject.tag != "Debris")
+        if (gameObject.transform.parent != null || gameObject.tag != "Debris")
         {
             gameObject.transform.position = gameObject.transform.parent.position;
             gameObject.transform.gameObject.GetComponent<Renderer>().material.shader = base_shader;
