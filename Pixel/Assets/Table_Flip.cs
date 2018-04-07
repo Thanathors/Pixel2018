@@ -13,6 +13,8 @@ public class Table_Flip : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        Debug.Log(GameController.table_flipped);
         if (is_flipped == false)
         {
             if (gameObject.transform.rotation.x > 0.1f || gameObject.transform.rotation.x < -0.1f)

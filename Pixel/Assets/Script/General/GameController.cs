@@ -78,7 +78,9 @@ public class GameController : MonoBehaviour {
         chess_count = 0;
         cloth_count = 0;
         broken_item_count = 0;
+        lamp_count = 0;
         trivia_count = 0;
+        table_flipped = 0;
         key_count = 0;
         IsPaused = false;
 
@@ -206,8 +208,8 @@ public class GameController : MonoBehaviour {
         {
             achievements[0] = true;
             pop_up_Achievement.SetActive(true);
-            pop_up_Achievement.transform.GetChild(0).GetComponent<Text>().text = "Art Storm";
-            pop_up_Achievement.transform.GetChild(1).GetComponent<Text>().text = "Make 6 Paintings Fall.";
+            pop_up_Achievement.transform.GetChild(0).GetComponent<Text>().text = "Mona Lisa";
+            pop_up_Achievement.transform.GetChild(1).GetComponent<Text>().text = "Steal every painting in the house.";
             Invoke("Achievement_FadeOut", 3f);
         }
         if (chess_count == 5 && achievements[1] == false)

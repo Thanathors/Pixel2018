@@ -199,8 +199,8 @@ public class ScoreScreen_Controller : MonoBehaviour {
 
         if (i == 0)
         {
-            title = "Art Storm";
-            text = "Make 6 Paintings Fall.";
+            title = "Mona Lisa";
+            text = "Steal every painting in the house.";
         }
         if (i == 1)
         {
