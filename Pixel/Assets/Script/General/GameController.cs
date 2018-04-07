@@ -37,6 +37,8 @@ public class GameController : MonoBehaviour {
     private Text timer_text;
     private Text time_minus;
     private float time_slower = 1f;
+    private GameObject item_panel;
+    private GameObject pop_up_Achievement;
     
 
     private void Awake()
@@ -54,16 +56,27 @@ public class GameController : MonoBehaviour {
     // Use this for initialization
     void Start () {
         ini_timer = timer;
+        pop_up_Achievement = GameObject.Find("Pop_up_Achievement");
+        item_panel = GameObject.Find("Items_UI");
+        item_panel.SetActive(false);
+        pop_up_Achievement.SetActive(false);
+
+#if UNITY_EDITOR
+        item_panel.SetActive(true);
         animal_text = GameObject.Find("Animal_Counter").GetComponent<Text>();
         wallet_text = GameObject.Find("Wallet_Counter").GetComponent<Text>();
         cloth_text = GameObject.Find("Cloth_Counter").GetComponent<Text>();
         key_text = GameObject.Find("Key_Counter").GetComponent<Text>();
         trivia_text = GameObject.Find("Trivia_Counter").GetComponent<Text>();
         broken_text = GameObject.Find("Broken_Counter").GetComponent<Text>();
+#endif
         timer_text = GameObject.Find("timer_txt").GetComponent<Text>();
         time_minus = GameObject.Find("time_minus").GetComponent<Text>();
         momentum_Img = GameObject.Find("Momentum_Counter").GetComponent<Image>();
         momentum_Img.fillAmount = 0.5f;
+
+
+
     }
 
 
@@ -86,13 +99,15 @@ public class GameController : MonoBehaviour {
             time_minus.color = new Color(0, 1, 0);
             time_slower = 0;
         }
-	// Update is called once per frame
+        // Update is called once per frame
+#if UNITY_EDITOR
         animal_text.text = "Animal:" + animal_count.ToString();
         wallet_text.text = "Wallet:" + wallet_count.ToString();
         cloth_text.text = "Cloth:" + cloth_count.ToString();
         key_text.text = "Key:" + key_count.ToString();
         trivia_text.text = "Trivia:" + trivia_count.ToString();
         broken_text.text = "Broken:" + broken_item_count.ToString();
+#endif
 
         if(timer <= 0 || endState == true)
         {
@@ -107,7 +122,14 @@ public class GameController : MonoBehaviour {
                 Invoke("Score", 2f);
             }
         }
-	}
+
+        if (broken_item_count == 20)
+        {
+            pop_up_Achievement.SetActive(true);
+            /*award = "Take this!";
+            Award_Des_txt.text = "Break a lot of thing in the house";*/
+        }
+    }
 
     void Score()
     {
