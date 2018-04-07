@@ -15,7 +15,16 @@ public class Item_Manager : MonoBehaviour {
 
     void Start ()
     {
-        m_audio = gameObject.AddComponent<AudioSource>();
+        if (!GetComponent<AudioSource>())
+        {
+            m_audio = gameObject.AddComponent<AudioSource>();
+        }
+
+        else
+        {
+            m_audio = GetComponent<AudioSource>();
+        }
+
         player = GameObject.FindGameObjectWithTag("Player");
         base_shader = Shader.Find("Standard");
         highlight_shader = Shader.Find("Outlined/Silhouetted Diffuse");
@@ -84,7 +93,7 @@ public class Item_Manager : MonoBehaviour {
     {
         GetComponent<Rigidbody>().AddForce((Camera.main.transform.forward) * 7.5f, ForceMode.Impulse);
         GetComponent<Rigidbody>().AddForce((Camera.main.transform.up) * 2f, ForceMode.Impulse);
-        if(!m_audio.isPlaying)
+        if(!m_audio.isPlaying && SoundToPlayWhenPunched != null)
         {
             m_audio.clip = SoundToPlayWhenPunched;
             m_audio.Play();

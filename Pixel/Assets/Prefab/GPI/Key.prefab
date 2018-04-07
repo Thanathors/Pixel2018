@@ -27,8 +27,6 @@ GameObject:
   - component: {fileID: 114403070270031090}
   - component: {fileID: 54591860100422240}
   - component: {fileID: 65675631813748340}
-  - component: {fileID: 82624900313138452}
-  - component: {fileID: 114384445882004504}
   m_Layer: 0
   m_Name: Key
   m_TagString: Item
@@ -48,7 +46,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 175.177, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!23 &23847645395979034
 MeshRenderer:
   m_ObjectHideFlags: 1
