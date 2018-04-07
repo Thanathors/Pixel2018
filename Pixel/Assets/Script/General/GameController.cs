@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public enum ItemList
 {
@@ -16,6 +17,7 @@ public enum ItemList
 
 public class GameController : MonoBehaviour {
 
+    public static bool IsPaused = false;
     public static int endState;
     public float timer = 60f;
     private float ini_timer;
@@ -77,6 +79,7 @@ public class GameController : MonoBehaviour {
         cloth_count = 0;
         trivia_count = 0;
         key_count = 0;
+        IsPaused = false;
 
     }
 
@@ -101,12 +104,12 @@ public class GameController : MonoBehaviour {
         timer_text = GameObject.Find("timer_txt").GetComponent<Text>();
         time_minus = GameObject.Find("time_minus").GetComponent<Text>();
         momentum_Img = GameObject.Find("Momentum_Counter").GetComponent<Image>();
-        momentum_Img.fillAmount = 0.2f;
+        momentum_Img.fillAmount = 0.5f;
     }
 
 
     void Update () {
-        if(timer >= 0)
+        if (timer >= 0 && IsPaused == false)
         {
             timer -= Time.deltaTime;
             momentum_Img.fillAmount -= 0.001f;
@@ -161,6 +164,26 @@ public class GameController : MonoBehaviour {
     }
     void PauseGame()
     {
+        if(IsPaused == false)
+        {
+            IsPaused = true;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = false;
+            GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
+            GameObject.Find("UI").GetComponent<Canvas>().enabled = false;
+            GameObject.Find("PauseCanvas").GetComponent<Canvas>().enabled = true;
+        }
+        else
+        {
+            IsPaused = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = true;
+            GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
+            GameObject.Find("UI").GetComponent<Canvas>().enabled = true;
+            GameObject.Find("PauseCanvas").GetComponent<Canvas>().enabled = false;
+        }
 
     }
 
@@ -202,7 +225,7 @@ public class GameController : MonoBehaviour {
             pop_up_Achievement.transform.GetChild(1).GetComponent<Text>().text = "Bring the Cat and Fish with you.";
             Invoke("Achievement_FadeOut", 3f);
         }
-        if (lamp_count == 10 && achievements[3] == false)
+        if (lamp_count == 15 && achievements[3] == false)
         {
             achievements[3] = true;
             pop_up_Achievement.SetActive(true);
@@ -210,7 +233,7 @@ public class GameController : MonoBehaviour {
             pop_up_Achievement.transform.GetChild(1).GetComponent<Text>().text = "Break all the lamps in the house.";
             Invoke("Achievement_FadeOut", 3f);
         }
-        if (table_flipped == 2 && achievements[4] == false)
+        if (table_flipped == 3 && achievements[4] == false)
         {
             achievements[4] = true;
             pop_up_Achievement.SetActive(true);
@@ -250,7 +273,7 @@ public class GameController : MonoBehaviour {
             pop_up_Achievement.transform.GetChild(1).GetComponent<Text>().text = "Feed your cat with something special.";
             Invoke("Achievement_FadeOut", 3f);
         }
-        if (broken_item_count == 20 && achievements[9] == false)
+        if (broken_item_count == 30 && achievements[9] == false)
         {
             achievements[9] = true;
             pop_up_Achievement.SetActive(true);
@@ -258,7 +281,7 @@ public class GameController : MonoBehaviour {
             pop_up_Achievement.transform.GetChild(1).GetComponent<Text>().text = "Break a lot of thing in the house.";
             Invoke("Achievement_FadeOut", 3f);
         }
-        if (momentum_Img.fillAmount == 1 && achievements[12] == false)
+        if (momentum_Img.fillAmount == 0.99f && achievements[12] == false)
         {
             achievements[12] = true;
             pop_up_Achievement.SetActive(true);

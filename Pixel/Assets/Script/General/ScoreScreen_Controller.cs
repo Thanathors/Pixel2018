@@ -17,11 +17,14 @@ public class ScoreScreen_Controller : MonoBehaviour {
     private Text stormRank;
     private GameObject hint;
     private int totalScore;
+    public AudioSource scoreScreenSongs;
 
 
     private void Start()
     {
-        if(Main_Menu_Controller.achievements != null)
+        scoreScreenSongs = GetComponent<AudioSource>();
+
+        if (Main_Menu_Controller.achievements != null)
         {
             for (int i = 0; i < Main_Menu_Controller.achievements.Count; i++)
             {
@@ -106,6 +109,19 @@ public class ScoreScreen_Controller : MonoBehaviour {
         {
             score += 7;
         }
+
+        if (score < 4)
+        {
+            scoreScreenSongs.Play();
+        }
+        else if (score >= 4 && score < 7)
+        {
+            scoreScreenSongs.Play();
+        }
+        else if (score >= 7 && score < 14)
+        {
+            scoreScreenSongs.Play();
+        }
     }
 
     // Update is called once per frame
@@ -138,7 +154,7 @@ public class ScoreScreen_Controller : MonoBehaviour {
 
         if (score < 2)
         {
-            stormRank.text = "Baby Storm"; 
+            stormRank.text = "Baby Storm";
             //Baby Storm
         }
         else if(score >=2 && score < 3)

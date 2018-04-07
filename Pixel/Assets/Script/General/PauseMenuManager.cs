@@ -1,62 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenuManager : MonoBehaviour {
 
-    public GameObject pausePanel;
 
-    public bool isPaused;
-
-	void Start ()
+    public void ReturnToMenu()
     {
-        isPaused = false;
-	}
-
-    void Update()
-    {
-        if (isPaused)
-        {
-            PauseGame (true);
-        }
-
-        else
-        {
-            PauseGame(false);
-        }
-
-        if (Input.GetButtonDown("Cancel"))
-        {
-            SwitchPause();
-        }
+        SceneManager.LoadScene(0);
     }
 
-    void PauseGame (bool state)
+    public void Retry()
     {
-        if (state)
-        {
-            pausePanel.SetActive(true);
-            Time.timeScale = 0.0f;
-        }
-
-        else
-        {
-            Time.timeScale = 1.0f;
-            pausePanel.SetActive(false);
-        }
-
-    }
-
-    public void SwitchPause ()
-    {
-         if (isPaused)
-         {
-             isPaused = false;
-         }
-
-         else
-         {
-             isPaused = true;
-         }
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
