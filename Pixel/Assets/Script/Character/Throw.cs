@@ -5,23 +5,25 @@ using UnityEngine;
 public class Throw : MonoBehaviour {
 
     GameObject item;
-    private bool animated = false;
+    Animator m_Anim;
+    [HideInInspector]
+    public bool animated = false;
     private GameObject dir;
 
-	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
         dir = GameObject.Find("ThrowDirection");
+        m_Anim = GetComponent<Animator>();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-
-        if (Input.GetKeyDown(KeyCode.Mouse0) && animated == false)
+	void Update ()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0) && animated == false && GetComponent<Item_Pick_Drop>().hand_Used)
         {
             animated = true;
+            m_Anim.SetTrigger("Throwing");
             Invoke("Delayer", 0.5f);
         }
-
 	}
     
     void Delayer()
@@ -31,8 +33,9 @@ public class Throw : MonoBehaviour {
             item = gameObject.transform.GetChild(0).GetChild(0).GetChild(0).gameObject;
             item.GetComponent<Rigidbody>().isKinematic = false;
             item.gameObject.transform.parent = null;
-            item.GetComponent<Rigidbody>().AddForce((Camera.main.transform.forward) * 10, ForceMode.Impulse);
+            item.GetComponent<Rigidbody>().AddForce((Camera.main.transform.forward) * 25, ForceMode.Impulse);
         }
+
         animated = false;
     }
 }
