@@ -26,7 +26,7 @@ public class ScoreScreen_Controller : MonoBehaviour {
     void Update()
     {
         timer += Time.deltaTime;
-        obj_collected_text.text = (GameController.total_count - GameController.broken_item_count).ToString();
+        obj_collected_text.text = (GameController.total_count).ToString();
         obj_destroyed_text.text = GameController.broken_item_count.ToString();
 
         if (GameController.total_count == 1)
@@ -77,7 +77,7 @@ public class ScoreScreen_Controller : MonoBehaviour {
             score += 5;
         }
 
-        int value = GameController.total_count - GameController.broken_item_count;
+        int value = GameController.total_count;
 
         if (value < 1)
         {
