@@ -6,6 +6,7 @@ public class IntroCutscene : MonoBehaviour
 {
     public GameObject playerbras;
     public Canvas HUD;
+    public Animator introText;
 
     void Start()
     {
@@ -17,6 +18,7 @@ public class IntroCutscene : MonoBehaviour
     {
         HUD.enabled = true;
         playerbras.SetActive(true);
+        introText.enabled = true;
         Camera.main.targetDisplay = 0;
         Destroy(gameObject);
     }
