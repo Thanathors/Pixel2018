@@ -926,6 +926,9 @@ MonoBehaviour:
   category: 1
   SoundToPlayWhenPunched: {fileID: 8300000, guid: 30385ae3f1598a04d8cc3de0a0823028,
     type: 3}
+  SoundToPlayWhenThrown: {fileID: 8300000, guid: 30385ae3f1598a04d8cc3de0a0823028,
+    type: 3}
+  IsThrown: 0
 --- !u!114 &114198864238387470
 MonoBehaviour:
   m_ObjectHideFlags: 1

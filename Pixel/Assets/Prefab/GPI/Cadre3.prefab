@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4176037449705330}
   - component: {fileID: 33990372028041014}
-  - component: {fileID: 64632128745398934}
   - component: {fileID: 23822289758768830}
   m_Layer: 0
   m_Name: Plane
@@ -38,7 +37,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4746491203902120}
   - component: {fileID: 33721569194501468}
-  - component: {fileID: 65902736168181362}
   - component: {fileID: 23035634186402350}
   m_Layer: 0
   m_Name: Cube
@@ -84,8 +82,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1848336307319888}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -4, y: 9.922219, z: -38.459}
+  m_LocalScale: {x: 2.5268464, y: 2.526847, z: 2.526847}
   m_Children:
   - {fileID: 4746491203902120}
   - {fileID: 4176037449705330}
@@ -202,32 +200,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &64632128745398934
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1280867256824504}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65902736168181362
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1315811864760582}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114290535177018634
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -240,3 +212,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   category: 4
+  SoundToPlayWhenPunched: {fileID: 8300000, guid: a191ab31924b0034dbf2202e8f94aeb1,
+    type: 3}
+  SoundToPlayWhenThrown: {fileID: 8300000, guid: a191ab31924b0034dbf2202e8f94aeb1,
+    type: 3}
+  IsThrown: 0

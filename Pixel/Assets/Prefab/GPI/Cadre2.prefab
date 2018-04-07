@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4242486183326296}
   - component: {fileID: 33420580525397278}
-  - component: {fileID: 65161053849770072}
   - component: {fileID: 23881619217001340}
   m_Layer: 0
   m_Name: Cube
@@ -38,7 +37,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4757635670683506}
   - component: {fileID: 33602332775376908}
-  - component: {fileID: 64955976091593864}
   - component: {fileID: 23439575483088658}
   m_Layer: 0
   m_Name: Plane
@@ -57,6 +55,7 @@ GameObject:
   - component: {fileID: 4221812314662880}
   - component: {fileID: 114412254961302680}
   - component: {fileID: 54730121400117660}
+  - component: {fileID: 65008333854398726}
   m_Layer: 0
   m_Name: Cadre2
   m_TagString: Item
@@ -70,15 +69,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1872671651026404}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -21.275318, y: 9.58, z: -25}
+  m_LocalScale: {x: 2.3805156, y: 2.3805165, z: 2.3805165}
   m_Children:
   - {fileID: 4242486183326296}
   - {fileID: 4757635670683506}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!4 &4242486183326296
 Transform:
   m_ObjectHideFlags: 1
@@ -202,31 +201,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &64955976091593864
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1449364162355312}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65161053849770072
+--- !u!65 &65008333854398726
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1310460596547272}
+  m_GameObject: {fileID: 1872671651026404}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.1, y: 1.35, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114412254961302680
 MonoBehaviour:
@@ -240,3 +225,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   category: 4
+  SoundToPlayWhenPunched: {fileID: 8300000, guid: a191ab31924b0034dbf2202e8f94aeb1,
+    type: 3}
+  SoundToPlayWhenThrown: {fileID: 8300000, guid: a191ab31924b0034dbf2202e8f94aeb1,
+    type: 3}
+  IsThrown: 0

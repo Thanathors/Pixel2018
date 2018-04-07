@@ -118,7 +118,7 @@ BoxCollider:
   m_Center: {x: -1, y: 0, z: 0}
 --- !u!65 &65698616935917328
 BoxCollider:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1417555791530924}
@@ -220,7 +220,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   category: 4
-  SoundToPlayWhenPunched: {fileID: 0}
+  SoundToPlayWhenPunched: {fileID: 8300000, guid: 78f597a439100394bb25ee04466c3f5e,
+    type: 3}
+  SoundToPlayWhenThrown: {fileID: 8300000, guid: 78f597a439100394bb25ee04466c3f5e,
+    type: 3}
+  IsThrown: 0
 --- !u!114 &114237061194903840
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -235,7 +239,7 @@ MonoBehaviour:
   _entityType: 0
 --- !u!114 &114306721650715320
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1417555791530924}
@@ -247,6 +251,8 @@ MonoBehaviour:
   category: 4
   SoundToPlayWhenPunched: {fileID: 8300000, guid: 78f597a439100394bb25ee04466c3f5e,
     type: 3}
+  SoundToPlayWhenThrown: {fileID: 0}
+  IsThrown: 0
 --- !u!114 &114963255054904444
 MonoBehaviour:
   m_ObjectHideFlags: 1

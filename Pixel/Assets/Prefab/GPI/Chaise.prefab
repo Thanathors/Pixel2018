@@ -40,13 +40,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1425331265663778}
-  m_LocalRotation: {x: -0, y: -0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.351669, y: 8.3036, z: -9.260651}
+  m_LocalRotation: {x: -0, y: -0.3788036, z: -0, w: 0.925477}
+  m_LocalPosition: {x: -6, y: 8.25, z: -14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -44.519, z: 0}
 --- !u!23 &23539344092119870
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -73,7 +73,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -1777,4 +1777,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   category: 4
-  SoundToPlayWhenPunched: {fileID: 0}
+  SoundToPlayWhenPunched: {fileID: 8300000, guid: 6f654b6c61cb3044197390050085a38a,
+    type: 3}
+  SoundToPlayWhenThrown: {fileID: 8300000, guid: 6f654b6c61cb3044197390050085a38a,
+    type: 3}
+  IsThrown: 0

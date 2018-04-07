@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1492098058601964}
   m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -19.186, y: 8.282, z: 1.9928474}
+  m_LocalPosition: {x: -18.17822, y: 8.282, z: 1.9928474}
   m_LocalScale: {x: 0.51556057, y: 0.64390063, z: 0.2029894}
   m_Children: []
   m_Father: {fileID: 0}
@@ -126,3 +126,6 @@ MonoBehaviour:
   category: 0
   SoundToPlayWhenPunched: {fileID: 8300000, guid: 3f436d42fccd0984ba8df70c5b18a920,
     type: 3}
+  SoundToPlayWhenThrown: {fileID: 8300000, guid: 78f597a439100394bb25ee04466c3f5e,
+    type: 3}
+  IsThrown: 0
