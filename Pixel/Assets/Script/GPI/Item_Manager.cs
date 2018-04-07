@@ -27,7 +27,7 @@ public class Item_Manager : MonoBehaviour {
             gameObject.transform.gameObject.GetComponent<Renderer>().material.shader = base_shader;
         }
 
-        if (gameObject.transform.parent != null)
+        if (gameObject.transform.parent != null && gameObject.tag != "Debris")
         {
             gameObject.transform.position = gameObject.transform.parent.position;
             gameObject.transform.gameObject.GetComponent<Renderer>().material.shader = base_shader;
@@ -41,7 +41,7 @@ public class Item_Manager : MonoBehaviour {
 
         if (Physics.Raycast(ray, out hit))
         {
-            if (hit.transform.gameObject.tag == "Item")
+            if (hit.transform.gameObject.tag == "Item" || hit.transform.gameObject.tag == "Debris")
             {
                 if (Vector3.Distance(transform.position, player.transform.position) < 2f && player.GetComponent<Smash>().breaking)
                 {

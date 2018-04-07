@@ -20,7 +20,7 @@ public class Item_Pick_Drop : MonoBehaviour {
 
         if (Physics.Raycast(ray, out hit))
         {
-            if (hit.transform.gameObject.tag == "Item")
+            if (hit.transform.gameObject.tag == "Item" || hit.transform.gameObject.tag == "Debris")
             {
                 if (Vector3.Distance(gameObject.transform.position, hit.transform.position) < 5)
                 {
