@@ -24,7 +24,6 @@ GameObject:
   - component: {fileID: 33652565978351430}
   - component: {fileID: 114787085866039690}
   - component: {fileID: 64961974256784796}
-  - component: {fileID: 114254904655029220}
   - component: {fileID: 54422094271970408}
   m_Layer: 0
   m_Name: BrokenBottleBottom
@@ -61,7 +60,6 @@ GameObject:
   - component: {fileID: 33049044946581664}
   - component: {fileID: 114178315145955424}
   - component: {fileID: 64817950930586430}
-  - component: {fileID: 114736759463910082}
   - component: {fileID: 54130899287454382}
   m_Layer: 0
   m_Name: BrokenBottleTop
@@ -4254,19 +4252,6 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
---- !u!114 &114254904655029220
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1626765729320204}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2750f5141fdad4f46bd611286b99b55e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isBreakable: 0
-  shatteredObject: {fileID: 0}
 --- !u!114 &114407503573733612
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4291,19 +4276,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entityType: 0
---- !u!114 &114736759463910082
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1958016641924478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2750f5141fdad4f46bd611286b99b55e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isBreakable: 0
-  shatteredObject: {fileID: 0}
 --- !u!114 &114787085866039690
 MonoBehaviour:
   m_ObjectHideFlags: 1

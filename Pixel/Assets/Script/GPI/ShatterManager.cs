@@ -9,11 +9,6 @@ public class ShatterManager : MonoBehaviour {
     [ReadOnly]
     public float speed;
 
-	void Start ()
-    {
-		
-	}
-
     void Update()
     {
         if (isBreakable)
@@ -26,8 +21,10 @@ public class ShatterManager : MonoBehaviour {
     private void FixedUpdate()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        speed = GetComponent<Rigidbody>().velocity.magnitude;
-
+        if (GetComponent<Rigidbody>())
+        {
+            speed = GetComponent<Rigidbody>().velocity.magnitude;
+        }
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
