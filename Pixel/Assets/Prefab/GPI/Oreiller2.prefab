@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 54886803941652400}
   m_Layer: 0
   m_Name: Oreiller2
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38,8 +38,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1492098058601964}
   m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.28168496, y: 0.35180584, z: 0.110906646}
+  m_LocalPosition: {x: -19.186, y: 8.282, z: 1.9928474}
+  m_LocalScale: {x: 0.51556057, y: 0.64390063, z: 0.2029894}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0

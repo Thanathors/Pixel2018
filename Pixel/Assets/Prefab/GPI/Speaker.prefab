@@ -59,9 +59,10 @@ GameObject:
   - component: {fileID: 65108767230393442}
   - component: {fileID: 23049698329258824}
   - component: {fileID: 54938442087093664}
+  - component: {fileID: 114181827526380026}
   m_Layer: 0
   m_Name: Speaker
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,15 +73,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1998930720112638}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -4.951, y: 9.245, z: -0.951}
   m_LocalScale: {x: 0.8669151, y: 1.2181194, z: 0.5957013}
   m_Children:
   - {fileID: 4377071688234876}
   - {fileID: 4743245519665518}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &4377071688234876
 Transform:
   m_ObjectHideFlags: 1
@@ -257,6 +258,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114181827526380026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1998930720112638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feee3e25f05726a43a29c1c26ac9fd1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  category: 4
 --- !u!136 &136084017547992578
 CapsuleCollider:
   m_ObjectHideFlags: 1
