@@ -54,7 +54,7 @@ GameObject:
   - component: {fileID: 33645035187856236}
   - component: {fileID: 114347761970517212}
   - component: {fileID: 64171980038043648}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fingers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 33109404302648932}
   - component: {fileID: 114844580906968402}
   - component: {fileID: 64980935164767756}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fingers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 33856333229393984}
   - component: {fileID: 114204044478752948}
   - component: {fileID: 64532617750020986}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fingers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 33032248699472716}
   - component: {fileID: 114790358883974048}
   - component: {fileID: 64592099211256332}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fingers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -404,7 +404,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1325345523413280}
   m_LocalRotation: {x: -0.51298374, y: -0.13552573, z: -0.3185696, w: 0.7854896}
-  m_LocalPosition: {x: 0.024000257, y: 1.2109997, z: -0.1279999}
+  m_LocalPosition: {x: 0.014, y: 1.3, z: -0.076}
   m_LocalScale: {x: 0.68970335, y: 0.6897036, z: 0.6897036}
   m_Children:
   - {fileID: 4094552566221226}
@@ -421,7 +421,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1094908401477630}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.25149918, y: -0.3283816, z: 1.25}
+  m_LocalPosition: {x: 0.015, y: -0.1, z: 2.744}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4479451942420338}
@@ -894,7 +894,7 @@ MeshCollider:
   m_GameObject: {fileID: 1932659552664624}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
@@ -908,7 +908,7 @@ MeshCollider:
   m_GameObject: {fileID: 1155210722293180}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
@@ -922,7 +922,7 @@ MeshCollider:
   m_GameObject: {fileID: 1926786270536414}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
@@ -936,7 +936,7 @@ MeshCollider:
   m_GameObject: {fileID: 1197033143179248}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
@@ -950,7 +950,7 @@ MeshCollider:
   m_GameObject: {fileID: 1544307759338310}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
@@ -964,7 +964,7 @@ MeshCollider:
   m_GameObject: {fileID: 1927859814351888}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
@@ -978,7 +978,7 @@ MeshCollider:
   m_GameObject: {fileID: 1325345523413280}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
@@ -992,7 +992,7 @@ MeshCollider:
   m_GameObject: {fileID: 1223927230510368}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
@@ -4533,15 +4533,9 @@ MonoBehaviour:
     areaError: 15
   asset_guid: 
   dontDestroyMeshOnDelete: 0
-  m_selectedFaces: 00000000
-  m_SelectedEdges:
-  - x: 0
-    y: 0
-  - x: 0
-    y: 0
-  - x: 0
-    y: 0
-  m_selectedTriangles: 000000000000000000000000
+  m_selectedFaces: 
+  m_SelectedEdges: []
+  m_selectedTriangles: 
 --- !u!114 &114027325139543510
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4553,6 +4547,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34a091b4b3e31c24d9b799d94d4ff239, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animated: 0
+  ThrowForce: 25
 --- !u!114 &114059115715651186
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5642,169 +5638,9 @@ MonoBehaviour:
     areaError: 15
   asset_guid: 
   dontDestroyMeshOnDelete: 0
-  m_selectedFaces: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000120000001300000014000000150000001600000017000000
-  m_SelectedEdges:
-  - x: 0
-    y: 1
-  - x: 2
-    y: 0
-  - x: 1
-    y: 3
-  - x: 3
-    y: 2
-  - x: 4
-    y: 5
-  - x: 6
-    y: 4
-  - x: 5
-    y: 7
-  - x: 7
-    y: 6
-  - x: 8
-    y: 9
-  - x: 10
-    y: 8
-  - x: 9
-    y: 11
-  - x: 11
-    y: 10
-  - x: 12
-    y: 13
-  - x: 14
-    y: 12
-  - x: 13
-    y: 15
-  - x: 15
-    y: 14
-  - x: 16
-    y: 17
-  - x: 18
-    y: 16
-  - x: 17
-    y: 19
-  - x: 19
-    y: 18
-  - x: 20
-    y: 21
-  - x: 22
-    y: 20
-  - x: 21
-    y: 23
-  - x: 23
-    y: 22
-  - x: 24
-    y: 25
-  - x: 26
-    y: 24
-  - x: 25
-    y: 27
-  - x: 27
-    y: 26
-  - x: 28
-    y: 29
-  - x: 30
-    y: 28
-  - x: 29
-    y: 31
-  - x: 31
-    y: 30
-  - x: 34
-    y: 33
-  - x: 33
-    y: 32
-  - x: 32
-    y: 34
-  - x: 40
-    y: 39
-  - x: 39
-    y: 38
-  - x: 38
-    y: 40
-  - x: 46
-    y: 45
-  - x: 45
-    y: 44
-  - x: 44
-    y: 46
-  - x: 52
-    y: 51
-  - x: 51
-    y: 50
-  - x: 50
-    y: 52
-  - x: 58
-    y: 57
-  - x: 57
-    y: 56
-  - x: 56
-    y: 58
-  - x: 64
-    y: 63
-  - x: 63
-    y: 62
-  - x: 62
-    y: 64
-  - x: 70
-    y: 69
-  - x: 69
-    y: 68
-  - x: 68
-    y: 70
-  - x: 76
-    y: 75
-  - x: 75
-    y: 74
-  - x: 74
-    y: 76
-  - x: 35
-    y: 36
-  - x: 36
-    y: 37
-  - x: 37
-    y: 35
-  - x: 41
-    y: 42
-  - x: 42
-    y: 43
-  - x: 43
-    y: 41
-  - x: 47
-    y: 48
-  - x: 48
-    y: 49
-  - x: 49
-    y: 47
-  - x: 53
-    y: 54
-  - x: 54
-    y: 55
-  - x: 55
-    y: 53
-  - x: 59
-    y: 60
-  - x: 60
-    y: 61
-  - x: 61
-    y: 59
-  - x: 65
-    y: 66
-  - x: 66
-    y: 67
-  - x: 67
-    y: 65
-  - x: 71
-    y: 72
-  - x: 72
-    y: 73
-  - x: 73
-    y: 71
-  - x: 77
-    y: 78
-  - x: 78
-    y: 79
-  - x: 79
-    y: 77
-  m_selectedTriangles: 00000000010000000200000001000000030000000200000004000000050000000600000005000000070000000600000008000000090000000a000000090000000b0000000a0000000c0000000d0000000e0000000d0000000f0000000e00000010000000110000001200000011000000130000001200000014000000150000001600000015000000170000001600000018000000190000001a000000190000001b0000001a0000001c0000001d0000001e0000001d0000001f0000001e0000002200000021000000200000002800000027000000260000002e0000002d0000002c0000003400000033000000320000003a0000003900000038000000400000003f0000003e0000004600000045000000440000004c0000004b0000004a000000230000002400000025000000290000002a0000002b0000002f00000030000000310000003500000036000000370000003b0000003c0000003d0000004100000042000000430000004700000048000000490000004d0000004e0000004f000000
+  m_selectedFaces: 
+  m_SelectedEdges: []
+  m_selectedTriangles: 
 --- !u!114 &114212745862253112
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10216,163 +10052,9 @@ MonoBehaviour:
     areaError: 15
   asset_guid: 
   dontDestroyMeshOnDelete: 0
-  m_selectedFaces: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f00000010000000110000001300000014000000150000001600000017000000
-  m_SelectedEdges:
-  - x: 0
-    y: 1
-  - x: 2
-    y: 0
-  - x: 1
-    y: 3
-  - x: 3
-    y: 2
-  - x: 4
-    y: 5
-  - x: 6
-    y: 4
-  - x: 5
-    y: 7
-  - x: 7
-    y: 6
-  - x: 8
-    y: 9
-  - x: 10
-    y: 8
-  - x: 9
-    y: 11
-  - x: 11
-    y: 10
-  - x: 12
-    y: 13
-  - x: 14
-    y: 12
-  - x: 13
-    y: 15
-  - x: 15
-    y: 14
-  - x: 16
-    y: 17
-  - x: 18
-    y: 16
-  - x: 17
-    y: 19
-  - x: 19
-    y: 18
-  - x: 20
-    y: 21
-  - x: 22
-    y: 20
-  - x: 21
-    y: 23
-  - x: 23
-    y: 22
-  - x: 24
-    y: 25
-  - x: 26
-    y: 24
-  - x: 25
-    y: 27
-  - x: 27
-    y: 26
-  - x: 28
-    y: 29
-  - x: 30
-    y: 28
-  - x: 29
-    y: 31
-  - x: 31
-    y: 30
-  - x: 34
-    y: 33
-  - x: 33
-    y: 32
-  - x: 32
-    y: 34
-  - x: 40
-    y: 39
-  - x: 39
-    y: 38
-  - x: 38
-    y: 40
-  - x: 46
-    y: 45
-  - x: 45
-    y: 44
-  - x: 44
-    y: 46
-  - x: 52
-    y: 51
-  - x: 51
-    y: 50
-  - x: 50
-    y: 52
-  - x: 58
-    y: 57
-  - x: 57
-    y: 56
-  - x: 56
-    y: 58
-  - x: 64
-    y: 63
-  - x: 63
-    y: 62
-  - x: 62
-    y: 64
-  - x: 70
-    y: 69
-  - x: 69
-    y: 68
-  - x: 68
-    y: 70
-  - x: 76
-    y: 75
-  - x: 75
-    y: 74
-  - x: 74
-    y: 76
-  - x: 35
-    y: 36
-  - x: 36
-    y: 37
-  - x: 37
-    y: 35
-  - x: 41
-    y: 42
-  - x: 42
-    y: 43
-  - x: 43
-    y: 41
-  - x: 53
-    y: 54
-  - x: 54
-    y: 55
-  - x: 55
-    y: 53
-  - x: 59
-    y: 60
-  - x: 60
-    y: 61
-  - x: 61
-    y: 59
-  - x: 65
-    y: 66
-  - x: 66
-    y: 67
-  - x: 67
-    y: 65
-  - x: 71
-    y: 72
-  - x: 72
-    y: 73
-  - x: 73
-    y: 71
-  - x: 77
-    y: 78
-  - x: 78
-    y: 79
-  - x: 79
-    y: 77
-  m_selectedTriangles: 00000000010000000200000001000000030000000200000004000000050000000600000005000000070000000600000008000000090000000a000000090000000b0000000a0000000c0000000d0000000e0000000d0000000f0000000e00000010000000110000001200000011000000130000001200000014000000150000001600000015000000170000001600000018000000190000001a000000190000001b0000001a0000001c0000001d0000001e0000001d0000001f0000001e0000002200000021000000200000002800000027000000260000002e0000002d0000002c0000003400000033000000320000003a0000003900000038000000400000003f0000003e0000004600000045000000440000004c0000004b0000004a000000230000002400000025000000290000002a0000002b0000003500000036000000370000003b0000003c0000003d0000004100000042000000430000004700000048000000490000004d0000004e0000004f000000
+  m_selectedFaces: 
+  m_SelectedEdges: []
+  m_selectedTriangles: 
 --- !u!114 &114407289800333758
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -10396,6 +10078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c91fb281ae8404bb0834ad4c7e49bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hand_Used: 0
 --- !u!114 &114715078099488836
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12473,163 +12156,9 @@ MonoBehaviour:
     areaError: 15
   asset_guid: 
   dontDestroyMeshOnDelete: 0
-  m_selectedFaces: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f00000010000000110000001300000014000000150000001600000017000000
-  m_SelectedEdges:
-  - x: 0
-    y: 1
-  - x: 2
-    y: 0
-  - x: 1
-    y: 3
-  - x: 3
-    y: 2
-  - x: 4
-    y: 5
-  - x: 6
-    y: 4
-  - x: 5
-    y: 7
-  - x: 7
-    y: 6
-  - x: 8
-    y: 9
-  - x: 10
-    y: 8
-  - x: 9
-    y: 11
-  - x: 11
-    y: 10
-  - x: 12
-    y: 13
-  - x: 14
-    y: 12
-  - x: 13
-    y: 15
-  - x: 15
-    y: 14
-  - x: 16
-    y: 17
-  - x: 18
-    y: 16
-  - x: 17
-    y: 19
-  - x: 19
-    y: 18
-  - x: 20
-    y: 21
-  - x: 22
-    y: 20
-  - x: 21
-    y: 23
-  - x: 23
-    y: 22
-  - x: 24
-    y: 25
-  - x: 26
-    y: 24
-  - x: 25
-    y: 27
-  - x: 27
-    y: 26
-  - x: 28
-    y: 29
-  - x: 30
-    y: 28
-  - x: 29
-    y: 31
-  - x: 31
-    y: 30
-  - x: 34
-    y: 33
-  - x: 33
-    y: 32
-  - x: 32
-    y: 34
-  - x: 40
-    y: 39
-  - x: 39
-    y: 38
-  - x: 38
-    y: 40
-  - x: 46
-    y: 45
-  - x: 45
-    y: 44
-  - x: 44
-    y: 46
-  - x: 52
-    y: 51
-  - x: 51
-    y: 50
-  - x: 50
-    y: 52
-  - x: 58
-    y: 57
-  - x: 57
-    y: 56
-  - x: 56
-    y: 58
-  - x: 64
-    y: 63
-  - x: 63
-    y: 62
-  - x: 62
-    y: 64
-  - x: 70
-    y: 69
-  - x: 69
-    y: 68
-  - x: 68
-    y: 70
-  - x: 76
-    y: 75
-  - x: 75
-    y: 74
-  - x: 74
-    y: 76
-  - x: 35
-    y: 36
-  - x: 36
-    y: 37
-  - x: 37
-    y: 35
-  - x: 41
-    y: 42
-  - x: 42
-    y: 43
-  - x: 43
-    y: 41
-  - x: 53
-    y: 54
-  - x: 54
-    y: 55
-  - x: 55
-    y: 53
-  - x: 59
-    y: 60
-  - x: 60
-    y: 61
-  - x: 61
-    y: 59
-  - x: 65
-    y: 66
-  - x: 66
-    y: 67
-  - x: 67
-    y: 65
-  - x: 71
-    y: 72
-  - x: 72
-    y: 73
-  - x: 73
-    y: 71
-  - x: 77
-    y: 78
-  - x: 78
-    y: 79
-  - x: 79
-    y: 77
-  m_selectedTriangles: 00000000010000000200000001000000030000000200000004000000050000000600000005000000070000000600000008000000090000000a000000090000000b0000000a0000000c0000000d0000000e0000000d0000000f0000000e00000010000000110000001200000011000000130000001200000014000000150000001600000015000000170000001600000018000000190000001a000000190000001b0000001a0000001c0000001d0000001e0000001d0000001f0000001e0000002200000021000000200000002800000027000000260000002e0000002d0000002c0000003400000033000000320000003a0000003900000038000000400000003f0000003e0000004600000045000000440000004c0000004b0000004a000000230000002400000025000000290000002a0000002b0000003500000036000000370000003b0000003c0000003d0000004100000042000000430000004700000048000000490000004d0000004e0000004f000000
+  m_selectedFaces: 
+  m_SelectedEdges: []
+  m_selectedTriangles: 
 --- !u!114 &114844580906968402
 MonoBehaviour:
   m_ObjectHideFlags: 1
