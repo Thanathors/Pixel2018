@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 54591860100422240}
   - component: {fileID: 65675631813748340}
   - component: {fileID: 114384445882004504}
+  - component: {fileID: 122926548266515686}
   m_Layer: 0
   m_Name: Key
   m_TagString: Item
@@ -1414,3 +1415,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _entityType: 0
+--- !u!122 &122926548266515686
+Halo:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1743662961913658}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278239173
+  m_Size: 1
