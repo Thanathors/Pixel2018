@@ -110,7 +110,7 @@ public class GameController : MonoBehaviour {
             momentum_Img.fillAmount -= 0.001f;
         }
         AchievementChecker();
-        timer_text.text = "Time left :" + Mathf.Round(timer).ToString();
+        timer_text.text = "Time Left:" + Mathf.Round(timer).ToString();
         momentum_Img.color = new Color((-(momentum_Img.fillAmount) + 1), momentum_Img.fillAmount, 0);
 
         if(total_temp != (total_count + broken_item_count))
@@ -210,7 +210,7 @@ public class GameController : MonoBehaviour {
         {
             achievements[5] = true;
             pop_up_Achievement.SetActive(true);
-            pop_up_Achievement.transform.GetChild(0).GetComponent<Text>().text = "Break the Ice";
+            pop_up_Achievement.transform.GetChild(0).GetComponent<Text>().text = "Breaking Out";
             pop_up_Achievement.transform.GetChild(1).GetComponent<Text>().text = "Break all windows in the house.";
             Invoke("Achievement_FadeOut", 3f);
         }
@@ -234,7 +234,7 @@ public class GameController : MonoBehaviour {
         {
             achievements[9] = true;
             pop_up_Achievement.SetActive(true);
-            pop_up_Achievement.transform.GetChild(0).GetComponent<Text>().text = "Take This!";
+            pop_up_Achievement.transform.GetChild(0).GetComponent<Text>().text = "Rampage!";
             pop_up_Achievement.transform.GetChild(1).GetComponent<Text>().text = "Break a lot of thing in the house.";
             Invoke("Achievement_FadeOut", 3f);
         }
@@ -242,8 +242,8 @@ public class GameController : MonoBehaviour {
         {
             achievements[12] = true;
             pop_up_Achievement.SetActive(true);
-            pop_up_Achievement.transform.GetChild(0).GetComponent<Text>().text = "In fire!";
-            pop_up_Achievement.transform.GetChild(1).GetComponent<Text>().text = "Have your momentum to it's maximum.";
+            pop_up_Achievement.transform.GetChild(0).GetComponent<Text>().text = "Oh you're angry!";
+            pop_up_Achievement.transform.GetChild(1).GetComponent<Text>().text = "Raise Momentum to its maximum.";
             Invoke("Achievement_FadeOut", 3f);
         }
     }
