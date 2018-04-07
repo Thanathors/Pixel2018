@@ -57,7 +57,6 @@ public class GameController : MonoBehaviour {
             for (int i = 0; i <= 16; i++)
             {
                 achievements.Add(false);
-                Debug.Log(achievements[i]);
             }
         }
         else
@@ -108,6 +107,7 @@ public class GameController : MonoBehaviour {
         if(timer >= 0)
         {
             timer -= Time.deltaTime;
+            momentum_Img.fillAmount -= 0.0002f;
         }
         AchievementChecker();
         timer_text.text = "Time left :" + Mathf.Round(timer).ToString();

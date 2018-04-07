@@ -4254,11 +4254,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -5352,7 +5352,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.6, y: -21.599998}
+  m_AnchoredPosition: {x: -2.600006, y: -21.599998}
   m_SizeDelta: {x: 388.6, y: 124.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &174852028
@@ -6787,7 +6787,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh326778
+  m_Name: pb_Mesh430344
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -8031,11 +8031,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -11534,7 +11534,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.1, y: -21.599998}
+  m_AnchoredPosition: {x: -0.1000061, y: -21.599998}
   m_SizeDelta: {x: 384.4, y: 124.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &399611533
@@ -12605,7 +12605,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh326272
+  m_Name: pb_Mesh429814
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -18799,7 +18799,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.9, y: -21.599998}
+  m_AnchoredPosition: {x: -1.8999939, y: -21.599998}
   m_SizeDelta: {x: 391.5, y: 124.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &579713785
@@ -19231,11 +19231,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -22273,11 +22273,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 0
+  m_havePropertiesChanged: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -22358,7 +22358,7 @@ Canvas:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 719151996}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -22440,7 +22440,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.2, y: -21.599998}
+  m_AnchoredPosition: {x: 3.199997, y: -21.599998}
   m_SizeDelta: {x: 388.7, y: 124.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &721565694
@@ -28116,7 +28116,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.3, y: -21.599998}
+  m_AnchoredPosition: {x: 1.300003, y: -21.599998}
   m_SizeDelta: {x: 384.8, y: 124.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &830642779
@@ -30516,7 +30516,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh328432
+  m_Name: pb_Mesh432054
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -32809,7 +32809,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh328574
+  m_Name: pb_Mesh432212
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -45872,7 +45872,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh327014
+  m_Name: pb_Mesh430580
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -46353,11 +46353,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -49460,7 +49460,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh326862
+  m_Name: pb_Mesh430428
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -52711,11 +52711,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -56281,7 +56281,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh328280
+  m_Name: pb_Mesh431894
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -56840,7 +56840,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.2, y: -21.599998}
+  m_AnchoredPosition: {x: -2.199997, y: -21.599998}
   m_SizeDelta: {x: 393.5, y: 124.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1650126366
@@ -59397,7 +59397,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.1, y: -21.599998}
+  m_AnchoredPosition: {x: 3.100006, y: -21.599998}
   m_SizeDelta: {x: 392.2, y: 124.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1743070886
@@ -64060,11 +64060,11 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -67508,7 +67508,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.4, y: -21.599998}
+  m_AnchoredPosition: {x: -1.3999939, y: -21.599998}
   m_SizeDelta: {x: 391.2, y: 124.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1918087085
@@ -68353,7 +68353,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh327728
+  m_Name: pb_Mesh431310
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -68483,7 +68483,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh326556
+  m_Name: pb_Mesh430122
   serializedVersion: 8
   m_SubMeshes:
   - serializedVersion: 2
@@ -69444,7 +69444,7 @@ Canvas:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1987380967}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -69918,7 +69918,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.1, y: -21.599998}
+  m_AnchoredPosition: {x: -0.1000061, y: -21.599998}
   m_SizeDelta: {x: 394.3, y: 124.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2040417824
