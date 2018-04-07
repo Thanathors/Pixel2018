@@ -28,6 +28,12 @@ public class Detection_item : MonoBehaviour {
                     GameController.chess_count++;
                     
                 }
+
+                if (other.gameObject.name.Substring(0, 5) == "Cadre")
+                {
+                    GameController.painting_fallen++;
+
+                }
             }
             if (other.gameObject.GetComponent<Item_Manager>().category == ItemList.Animal)
             {

@@ -23,6 +23,8 @@ public class ScoreScreen_Controller : MonoBehaviour {
     private void Start()
     {
         scoreScreenSongs = GetComponent<AudioSource>();
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
 
         if (Main_Menu_Controller.achievements != null)
         {
@@ -195,7 +197,7 @@ public class ScoreScreen_Controller : MonoBehaviour {
         string text = "";
         hint.SetActive(true);
 
-        if(i == 0)
+        if (i == 0)
         {
             title = "Art Storm";
             text = "Make 6 Paintings Fall.";
@@ -245,10 +247,35 @@ public class ScoreScreen_Controller : MonoBehaviour {
             title = "Take This!";
             text = "Break a lot of thing in the house.";
         }
+        if (i == 10)
+        {
+            title = "Hidden";
+            text = "It's well hidden in the game... Can you find it?";
+        }
+        if (i == 11)
+        {
+            title = "Hidden";
+            text = "It's well hidden in the game... Can you find it?";
+        }
         if (i == 12)
         {
             title = "In fire!";
-            text = "Have your momentum to it's maximum.";
+            text = "It's well hidden in the game... Can you find it?";
+        }
+        if (i == 13)
+        {
+            title = "Hidden";
+            text = "It's well hidden in the game... Can you find it?";
+        }
+        if (i == 14)
+        {
+            title = "Hidden";
+            text = "It's well hidden in the game... Can you find it?";
+        }
+        if (i == 15)
+        {
+            title = "Hidden";
+            text = "It's well hidden in the game... Can you find it?";
         }
 
 
