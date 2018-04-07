@@ -228,7 +228,7 @@ public class GameController : MonoBehaviour {
             pop_up_Achievement.transform.GetChild(1).GetComponent<Text>().text = "Bring the Cat and Fish with you.";
             Invoke("Achievement_FadeOut", 3f);
         }
-        if (lamp_count == 15 && achievements[3] == false)
+        if (lamp_count == 13 && achievements[3] == false)
         {
             achievements[3] = true;
             pop_up_Achievement.SetActive(true);

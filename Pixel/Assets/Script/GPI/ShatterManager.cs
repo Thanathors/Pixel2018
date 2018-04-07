@@ -83,6 +83,7 @@ public class ShatterManager : MonoBehaviour {
             if (gameObject.name.Substring(0, 5) == "Lampe")
             {
                 GameController.lamp_count++;
+                Debug.Log(GameController.lamp_count);
             }
             if (gameObject.name.Substring(0, 5) == "Windo")
             {
