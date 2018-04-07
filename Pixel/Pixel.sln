@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
+# Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pixel", "Pixel.csproj", "{DBB60BB5-F109-3C8F-27C8-11320A29637A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pixel.Plugins", "Pixel.Plugins.csproj", "{6DF9DC24-C8E0-0E81-F360-ED5B5D00FD99}"
