@@ -5,21 +5,19 @@ using UnityEngine;
 public class IntroCutscene : MonoBehaviour
 {
     public GameObject playerbras;
-    public GameObject cam;
-    public GameObject HUD;
+    public Canvas HUD;
 
     void Start()
     {
-        playerbras.gameObject.SetActive(false);
-        HUD.gameObject.SetActive(false);
+        HUD.enabled = false;
+        playerbras.SetActive(false);
     }
-
-
 
     private void KillCamera()
     {
-        Destroy(cam);
-        playerbras.gameObject.SetActive(true);
-        HUD.gameObject.SetActive(true);
+        HUD.enabled = true;
+        playerbras.SetActive(true);
+        Camera.main.targetDisplay = 0;
+        Destroy(gameObject);
     }
 }
