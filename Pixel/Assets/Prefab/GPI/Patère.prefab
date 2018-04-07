@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4510880505261294}
   - component: {fileID: 54752547984298510}
   - component: {fileID: 114880005469710316}
+  - component: {fileID: 65462605192952000}
   m_Layer: 0
   m_Name: "Pat\xE8re"
   m_TagString: Item
@@ -249,7 +250,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1030686388492254}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -38.760254, y: 2.108, z: -15.93}
   m_LocalScale: {x: 0.13773108, y: 0.2814375, z: 0.23043188}
   m_Children:
   - {fileID: 4276815215406992}
@@ -725,6 +726,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &65462605192952000
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1030686388492254}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.4438257, y: 8.631074, z: 3.4193075}
+  m_Center: {x: 0.20337692, y: 1.1872532, z: -0.3528125}
 --- !u!65 &65592555567520078
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -787,6 +800,8 @@ MonoBehaviour:
   category: 4
   SoundToPlayWhenPunched: {fileID: 8300000, guid: 6ff15657713786542b7e7427a57c3c64,
     type: 3}
+  SoundToPlayWhenThrown: {fileID: 0}
+  IsThrown: 0
 --- !u!136 &136015329736588686
 CapsuleCollider:
   m_ObjectHideFlags: 1

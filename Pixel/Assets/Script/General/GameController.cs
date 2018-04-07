@@ -77,6 +77,7 @@ public class GameController : MonoBehaviour {
         wallet_count = 0;
         chess_count = 0;
         cloth_count = 0;
+        broken_item_count = 0;
         trivia_count = 0;
         key_count = 0;
         IsPaused = false;
