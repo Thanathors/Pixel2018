@@ -21,13 +21,22 @@ public class GameController : MonoBehaviour {
     private float ini_timer;
     private Image timer_Img;
     private Image momentum_Img;
+    public static List<bool> achievements;
     public static int total_count;
+    public static int painting_fallen;
+    public static int chess_count;
+    public static int windows_broken;
     public static int animal_count;
+    public static int fish_count;
+    public static int cat_count;
+    public static int lamp_count;
     public static int wallet_count;
+    public static int table_flipped;
     public static int cloth_count;
     public static int trivia_count;
     public static int key_count;
     public static int broken_item_count;
+    private int total_temp;
     private Text animal_text;
     private Text wallet_text;
     private Text cloth_text;
@@ -43,10 +52,16 @@ public class GameController : MonoBehaviour {
 
     private void Awake()
     {
+        achievements = new List<bool>();
         total_count = 0;
         endState = false;
         animal_count = 0;
+        cat_count = 0;
+        fish_count = 0;
+        windows_broken = 0;
+        painting_fallen = 0;                                                                                                                                                                                                                                  
         wallet_count = 0;
+        chess_count = 0;
         cloth_count = 0;
         trivia_count = 0;
         key_count = 0;
@@ -60,6 +75,7 @@ public class GameController : MonoBehaviour {
         item_panel = GameObject.Find("Items_UI");
         item_panel.SetActive(false);
         pop_up_Achievement.SetActive(false);
+        total_temp = total_count + broken_item_count;
 
 #if UNITY_EDITOR
         item_panel.SetActive(true);
@@ -75,8 +91,10 @@ public class GameController : MonoBehaviour {
         momentum_Img = GameObject.Find("Momentum_Counter").GetComponent<Image>();
         momentum_Img.fillAmount = 0.5f;
 
-
-
+        for (int i = 0; i < 15; i++)
+        {
+            achievements.Add(false);
+        }
     }
 
 
@@ -85,8 +103,16 @@ public class GameController : MonoBehaviour {
         {
             timer -= Time.deltaTime;
         }
+        AchievementChecker();
         timer_text.text = "Time left :" + Mathf.Round(timer).ToString();
         momentum_Img.color = new Color((-(momentum_Img.fillAmount) + 1), momentum_Img.fillAmount, 0);
+
+        if(total_temp != (total_count + broken_item_count))
+        {
+            total_temp = total_count + broken_item_count;
+            momentum_Img.fillAmount += 0.05f;
+        }
+
         if(momentum_Img.fillAmount == 0 && timer > 0)
         {
             time_minus.text = "-5";
@@ -109,9 +135,9 @@ public class GameController : MonoBehaviour {
         broken_text.text = "Broken:" + broken_item_count.ToString();
 #endif
 
-        if(timer <= 0 || endState == true)
+        if (timer <= 0 || endState == true)
         {
-            if(endState == true)
+            if (endState == true)
             {
                 Invoke("Score", 3f);
 
@@ -122,17 +148,100 @@ public class GameController : MonoBehaviour {
                 Invoke("Score", 2f);
             }
         }
-
-        if (broken_item_count == 20)
-        {
-            pop_up_Achievement.SetActive(true);
-            /*award = "Take this!";
-            Award_Des_txt.text = "Break a lot of thing in the house";*/
-        }
     }
 
     void Score()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+    }
+
+    void Achievement_FadeOut()
+    {
+        pop_up_Achievement.SetActive(false);
+    }
+    
+    void AchievementChecker()
+    {
+
+        if (painting_fallen == 6 && achievements[0] == false)
+        {
+            achievements[0] = true;
+            pop_up_Achievement.SetActive(true);
+            pop_up_Achievement.transform.GetChild(0).GetComponent<Text>().text = "Art Storm";
+            pop_up_Achievement.transform.GetChild(1).GetComponent<Text>().text = "Make 6 Paintings Fall.";
+            Invoke("Achievement_FadeOut", 3f);
+        }
+        if (chess_count == 5 && achievements[1] == false)
+        {
+            achievements[1] = true;
+            pop_up_Achievement.SetActive(true);
+            pop_up_Achievement.transform.GetChild(0).GetComponent<Text>().text = "Strategist";
+            pop_up_Achievement.transform.GetChild(1).GetComponent<Text>().text = "Bring some Chess pieces with you.";
+            Invoke("Achievement_FadeOut", 3f);
+        }
+        if (cat_count == 1 && fish_count > 0 && achievements[2] == false)
+        {
+            achievements[2] = true;
+            pop_up_Achievement.SetActive(true);
+            pop_up_Achievement.transform.GetChild(0).GetComponent<Text>().text = "Animal Freak";
+            pop_up_Achievement.transform.GetChild(1).GetComponent<Text>().text = "Bring the Cat and Fish with you.";
+            Invoke("Achievement_FadeOut", 3f);
+        }
+        if (lamp_count == 10 && achievements[3] == false)
+        {
+            achievements[3] = true;
+            pop_up_Achievement.SetActive(true);
+            pop_up_Achievement.transform.GetChild(0).GetComponent<Text>().text = "Lights out";
+            pop_up_Achievement.transform.GetChild(1).GetComponent<Text>().text = "Break all the lamps in the house.";
+            Invoke("Achievement_FadeOut", 3f);
+        }
+        if (table_flipped == 2 && achievements[4] == false)
+        {
+            achievements[4] = true;
+            pop_up_Achievement.SetActive(true);
+            pop_up_Achievement.transform.GetChild(0).GetComponent<Text>().text = "Table Flipper";
+            pop_up_Achievement.transform.GetChild(1).GetComponent<Text>().text = "Flip all the tables.";
+            Invoke("Achievement_FadeOut", 3f);
+        }
+        if (windows_broken == 4 && achievements[5] == false)
+        {
+            achievements[5] = true;
+            pop_up_Achievement.SetActive(true);
+            pop_up_Achievement.transform.GetChild(0).GetComponent<Text>().text = "Break the Ice";
+            pop_up_Achievement.transform.GetChild(1).GetComponent<Text>().text = "Break all windows in the house.";
+            Invoke("Achievement_FadeOut", 3f);
+        }
+        if (fish_count == 2 && achievements[6] == false)
+        {
+            achievements[6] = true;
+            pop_up_Achievement.SetActive(true);
+            pop_up_Achievement.transform.GetChild(0).GetComponent<Text>().text = "Sushi Time";
+            pop_up_Achievement.transform.GetChild(1).GetComponent<Text>().text = "Bring back both fish.";
+            Invoke("Achievement_FadeOut", 3f);
+        }
+        if (key_count == 3 && achievements[7] == false)
+        {
+            achievements[7] = true;
+            pop_up_Achievement.SetActive(true);
+            pop_up_Achievement.transform.GetChild(0).GetComponent<Text>().text = "Master of Keys";
+            pop_up_Achievement.transform.GetChild(1).GetComponent<Text>().text = "Bring back all three keys.";
+            Invoke("Achievement_FadeOut", 3f);
+        }
+        if (broken_item_count == 20 && achievements[9] == false)
+        {
+            achievements[9] = true;
+            pop_up_Achievement.SetActive(true);
+            pop_up_Achievement.transform.GetChild(0).GetComponent<Text>().text = "Take This!";
+            pop_up_Achievement.transform.GetChild(1).GetComponent<Text>().text = "Break a lot of thing in the house.";
+            Invoke("Achievement_FadeOut", 3f);
+        }
+        if (momentum_Img.fillAmount == 1 && achievements[12] == false)
+        {
+            achievements[12] = true;
+            pop_up_Achievement.SetActive(true);
+            pop_up_Achievement.transform.GetChild(0).GetComponent<Text>().text = "In fire!";
+            pop_up_Achievement.transform.GetChild(1).GetComponent<Text>().text = "Have your momentum to it's maximum.";
+            Invoke("Achievement_FadeOut", 3f);
+        }
     }
 }
