@@ -180,7 +180,7 @@ public class GameController : MonoBehaviour {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             GameObject.FindGameObjectWithTag("Player").GetComponent<FirstPersonController>().enabled = true;
-            GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).GetChild(1).gameObject.SetActive(false);
+            GameObject.FindGameObjectWithTag("Player").transform.GetChild(0).GetChild(1).gameObject.SetActive(true);
             GameObject.Find("UI").GetComponent<Canvas>().enabled = true;
             GameObject.Find("PauseCanvas").GetComponent<Canvas>().enabled = false;
         }
@@ -233,7 +233,7 @@ public class GameController : MonoBehaviour {
             pop_up_Achievement.transform.GetChild(1).GetComponent<Text>().text = "Break all the lamps in the house.";
             Invoke("Achievement_FadeOut", 3f);
         }
-        if (table_flipped == 3 && achievements[4] == false)
+        if (table_flipped == 6 && achievements[4] == false)
         {
             achievements[4] = true;
             pop_up_Achievement.SetActive(true);
