@@ -19,6 +19,7 @@ public class GameController : MonoBehaviour {
     public static bool endState;
     public float timer = 10f;
     private float ini_timer;
+    private Image timer_Img;
     private Image momentum_Img;
     public static int total_count;
     public static int animal_count;
@@ -27,7 +28,6 @@ public class GameController : MonoBehaviour {
     public static int trivia_count;
     public static int key_count;
     public static int broken_item_count;
-    private int total_count_temp;
     private Text animal_text;
     private Text wallet_text;
     private Text cloth_text;
@@ -42,7 +42,6 @@ public class GameController : MonoBehaviour {
     private void Awake()
     {
         total_count = 0;
-        total_count_temp = total_count;
         endState = false;
         animal_count = 0;
         wallet_count = 0;
@@ -74,6 +73,9 @@ public class GameController : MonoBehaviour {
             timer -= Time.deltaTime;
         }
 
+        timer -= Time.deltaTime;
+        timer_Img.fillAmount = timer / ini_timer;
+
         timer_text.text = "Time left :" + Mathf.Round(timer).ToString();
         momentum_Img.color = new Color((-(momentum_Img.fillAmount) + 1), momentum_Img.fillAmount, 0);
         if(momentum_Img.fillAmount == 0 && timer > 0)
@@ -88,6 +90,7 @@ public class GameController : MonoBehaviour {
             time_minus.color = new Color(0, 1, 0);
             time_slower = 0;
         }
+	// Update is called once per frame
         animal_text.text = "Animal:" + animal_count.ToString();
         wallet_text.text = "Wallet:" + wallet_count.ToString();
         cloth_text.text = "Cloth:" + cloth_count.ToString();
@@ -95,22 +98,11 @@ public class GameController : MonoBehaviour {
         trivia_text.text = "Trivia:" + trivia_count.ToString();
         broken_text.text = "Broken:" + broken_item_count.ToString();
 
-        if (total_count != total_count_temp)
-        {
-            total_count_temp = total_count;
-            momentum_Img.fillAmount += .10f;
-        }
-
-        if(momentum_Img.fillAmount > 0)
-        {
-            momentum_Img.fillAmount -= Time.deltaTime / 100;
-        }
-
-        if (timer <= 0 || endState == true)
+        if(timer <= 0 || endState == true)
         {
             if(endState == true)
             {
-                Invoke("Score", 1f);
+                Invoke("Score", 3f);
 
             }
             if (timer <= 0)
