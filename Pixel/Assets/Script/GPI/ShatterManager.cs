@@ -23,6 +23,8 @@ public class ShatterManager : MonoBehaviour {
 
     private void FixedUpdate()
     {
+        Debug.Log(GetComponent<Rigidbody>().velocity);
+
         GameObject player = GameObject.FindGameObjectWithTag("Player");
 
         RaycastHit hit;
@@ -47,5 +49,9 @@ public class ShatterManager : MonoBehaviour {
             isBreakable = true;
             GameController.broken_item_count++;
         }
+
+        //if(GetComponent<Rigidbody>().velocity.magnitude == 10f)
+        //{
+        //}
     }
 }

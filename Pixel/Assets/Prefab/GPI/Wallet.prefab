@@ -24,7 +24,6 @@ GameObject:
   - component: {fileID: 23312272642476440}
   - component: {fileID: 54989333242901336}
   - component: {fileID: 114956674910627688}
-  - component: {fileID: 114900533157918856}
   m_Layer: 0
   m_Name: Wallet
   m_TagString: Item
@@ -38,8 +37,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1852092602159158}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.67, y: 0.53, z: -80.73}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.7461214, y: 2.529, z: -17.378132}
   m_LocalScale: {x: 0.40349948, y: 0.4034995, z: 0.4034995}
   m_Children: []
   m_Father: {fileID: 0}
@@ -113,18 +112,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114900533157918856
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1852092602159158}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23fa698560b688845bf08bafe6dc1b28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AdditionalVertexStreamMesh: {fileID: 0}
 --- !u!114 &114956674910627688
 MonoBehaviour:
   m_ObjectHideFlags: 1

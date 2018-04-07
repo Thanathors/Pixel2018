@@ -22,10 +22,26 @@ public class Item_Manager : MonoBehaviour {
         {
             gameObject.GetComponent<Renderer>().material.shader = highlight_shader;
         }
+
         else
         {
             gameObject.transform.gameObject.GetComponent<Renderer>().material.shader = base_shader;
         }
+
+        //RaycastHit hit;
+        //Vector3 rayDirection = player.transform.position - transform.position;
+        //if (Physics.Raycast(transform.position, rayDirection, out hit))
+        //{
+        //    if (hit.transform.tag == "player")
+        //    {
+        //        Debug.Log("Seen");
+        //    }
+
+        //    else
+        //    {
+        //        Debug.Log("Unseen");
+        //    }
+        //}
 
         //if (gameObject.transform.parent != null || gameObject.tag != "Debris")
         //{
