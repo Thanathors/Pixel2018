@@ -22,6 +22,7 @@ public class GameController : MonoBehaviour {
     private Image timer_Img;
     private Image momentum_Img;
     public static int total_count;
+    public static int cat_feeded;
     public static int painting_fallen;
     public static int chess_count;
     public static int windows_broken;
@@ -66,6 +67,7 @@ public class GameController : MonoBehaviour {
         total_count = 0;
         endState = 0;
         animal_count = 0;
+        cat_feeded = 0;
         cat_count = 0;
         fish_count = 0;
         windows_broken = 0;
@@ -228,6 +230,14 @@ public class GameController : MonoBehaviour {
             pop_up_Achievement.SetActive(true);
             pop_up_Achievement.transform.GetChild(0).GetComponent<Text>().text = "Master of Keys";
             pop_up_Achievement.transform.GetChild(1).GetComponent<Text>().text = "Bring back all three keys.";
+            Invoke("Achievement_FadeOut", 3f);
+        }
+        if (cat_feeded > 0 && achievements[8] == false)
+        {
+            achievements[8] = true;
+            pop_up_Achievement.SetActive(true);
+            pop_up_Achievement.transform.GetChild(0).GetComponent<Text>().text = "Eaten Alive!";
+            pop_up_Achievement.transform.GetChild(1).GetComponent<Text>().text = "Feed your cat with something special.";
             Invoke("Achievement_FadeOut", 3f);
         }
         if (broken_item_count == 20 && achievements[9] == false)

@@ -9,6 +9,8 @@ public class Main_Menu_Controller : MonoBehaviour {
     private Canvas main_menu;
     private Canvas achievement_canvas;
     private Canvas credits;
+    private string title;
+    private string text;
     public static List<bool> achievements;
 
     // Use this for initialization
@@ -45,6 +47,64 @@ public class Main_Menu_Controller : MonoBehaviour {
                     GameObject.Find("Achievement" + i).transform.GetChild(0).GetComponent<Text>().color = Color.white;
                     GameObject.Find("Achievement" + i).transform.GetChild(1).GetComponent<Text>().color = Color.white;
                 }
+                if (i == 0)
+                {
+                    title = "Art Storm";
+                    text = "Make 6 Paintings Fall.";
+                }
+                if (i == 1)
+                {
+                    title = "Strategist";
+                    text = "Bring some Chess pieces with you.";
+                }
+                if (i == 2)
+                {
+                    title = "Animal Freak";
+                    text = "Bring the Cat and Fish with you.";
+                }
+                if (i == 3)
+                {
+                    title = "Lights out";
+                    text = "Break all the lamps in the house.";
+                }
+                if (i == 4)
+                {
+                    title = "Table Flipper";
+                    text = "Flip all the tables.";
+                }
+                if (i == 5)
+                {
+                    title = "Break the Ice";
+                    text = "Break all windows in the house.";
+                }
+                if (i == 6)
+                {
+                    title = "Sushi Time";
+                    text = "Bring back both fish.";
+                }
+                if (i == 7)
+                {
+                    title = "Master of Keys";
+                    text = "Bring back all three keys.";
+                }
+                if (i == 8)
+                {
+                    title = "Eaten Alive!";
+                    text = "Feed your cat with something special.";
+                }
+                if (i == 9)
+                {
+                    title = "Take This!";
+                    text = "Break a lot of thing in the house.";
+                }
+                if (i == 12)
+                {
+                    title = "In fire!";
+                    text = "Have your momentum to it's maximum.";
+                }
+
+                GameObject.Find("Achievement" + i).transform.GetChild(0).GetComponent<Text>().text = title;
+                GameObject.Find("Achievement" + i).transform.GetChild(1).GetComponent<Text>().text = text;
             }
         }
     }
