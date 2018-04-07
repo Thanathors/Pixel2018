@@ -50,6 +50,16 @@ public class Item_Manager : MonoBehaviour {
             }
         }
 
+        if(player.GetComponent<Item_Pick_Drop>().ItemBeingHeld != null && player.GetComponent<Item_Pick_Drop>().ItemBeingHeld == gameObject)
+        {
+            GetComponent<Collider>().enabled = false;
+        }
+
+        else
+        {
+            GetComponent<Collider>().enabled = true;
+        }
+
         //RaycastHit hit;
         //Vector3 rayDirection = player.transform.position - transform.position;
         //if (Physics.Raycast(transform.position, rayDirection, out hit))
