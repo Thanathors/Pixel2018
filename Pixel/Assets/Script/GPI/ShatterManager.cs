@@ -30,9 +30,8 @@ public class ShatterManager : MonoBehaviour {
 
         if (Physics.Raycast(ray, out hit))
         {
-            if (hit.transform.gameObject.tag == "Item" || hit.transform.gameObject.tag == "Debirs")
+            if (hit.transform.gameObject.tag == "Item" || hit.transform.gameObject.tag == "Debris")
             {
-                Debug.Log("Bitch");
                 if (Vector3.Distance(transform.position, player.transform.position) < 2f && player.GetComponent<Smash>().breaking)
                 {
                     isBreakable = true;
