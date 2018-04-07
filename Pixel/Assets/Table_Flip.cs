@@ -26,6 +26,5 @@ public class Table_Flip : MonoBehaviour {
                 is_flipped = true;
             }
         }
-        Debug.Log(GameController.table_flipped);
 	}
 }
