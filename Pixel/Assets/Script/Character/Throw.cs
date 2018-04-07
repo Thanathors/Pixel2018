@@ -25,11 +25,10 @@ public class Throw : MonoBehaviour {
         {
             animated = true;
             m_Anim.SetTrigger("Throwing");
-            Invoke("Delayer", 0.5f);
         }
 	}
     
-    void Delayer()
+    public void Trower()
     {
         if (gameObject.transform.GetChild(0).GetChild(0).childCount != 0)
         {
