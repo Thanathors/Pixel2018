@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Achievement_Sound : MonoBehaviour {
 
-    public AudioSource achievement;
-
-	
+    AudioSource achievement;
+    	
 	// Update is called once per frame
-	void Start () {
-        achievement = GetComponent< AudioSource> ();
+	void Awake ()
+    {
+        achievement = GetComponent<AudioSource>();
 	}
 
     public void OnEnable()
