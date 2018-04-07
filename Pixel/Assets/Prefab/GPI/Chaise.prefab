@@ -73,7 +73,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 0
+  m_SelectedEditorRenderState: 2
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -1777,6 +1777,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   category: 4
-  SoundToPlayWhenPunched: {fileID: 0}
-  SoundToPlayWhenThrown: {fileID: 0}
+  SoundToPlayWhenPunched: {fileID: 8300000, guid: 6f654b6c61cb3044197390050085a38a,
+    type: 3}
+  SoundToPlayWhenThrown: {fileID: 8300000, guid: 6f654b6c61cb3044197390050085a38a,
+    type: 3}
   IsThrown: 0

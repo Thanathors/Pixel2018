@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4982129985239492}
   - component: {fileID: 33834828522128728}
-  - component: {fileID: 65633241720682706}
   - component: {fileID: 23500420846626746}
   m_Layer: 0
   m_Name: Cube
@@ -40,6 +39,7 @@ GameObject:
   - component: {fileID: 54706467859646574}
   - component: {fileID: 114349025644373342}
   - component: {fileID: 82786109761096838}
+  - component: {fileID: 65730553797246436}
   m_Layer: 0
   m_Name: Cadre1
   m_TagString: Item
@@ -56,7 +56,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4129272688105956}
   - component: {fileID: 33950376745289508}
-  - component: {fileID: 64119559061127022}
   - component: {fileID: 23151088991284068}
   m_Layer: 0
   m_Name: Plane
@@ -84,15 +83,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1369759363889710}
-  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -30.69, y: 3.83, z: 3.96}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -17.576, y: 9.577, z: -23.935}
   m_LocalScale: {x: 1.5065026, y: 1.5065022, z: 1.5065022}
   m_Children:
   - {fileID: 4982129985239492}
   - {fileID: 4129272688105956}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &4982129985239492
 Transform:
   m_ObjectHideFlags: 1
@@ -203,31 +202,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &64119559061127022
-MeshCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1555722094808640}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65633241720682706
+--- !u!65 &65730553797246436
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1220903324931690}
+  m_GameObject: {fileID: 1369759363889710}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.1, y: 1.35, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &82786109761096838
 AudioSource:
@@ -296,7 +281,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -323,3 +308,6 @@ MonoBehaviour:
   category: 4
   SoundToPlayWhenPunched: {fileID: 8300000, guid: a191ab31924b0034dbf2202e8f94aeb1,
     type: 3}
+  SoundToPlayWhenThrown: {fileID: 8300000, guid: a191ab31924b0034dbf2202e8f94aeb1,
+    type: 3}
+  IsThrown: 0

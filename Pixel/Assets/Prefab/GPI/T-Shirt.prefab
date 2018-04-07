@@ -220,6 +220,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   category: 0
   SoundToPlayWhenPunched: {fileID: 0}
+  SoundToPlayWhenThrown: {fileID: 0}
+  IsThrown: 0
 --- !u!114 &114712508970215920
 MonoBehaviour:
   m_ObjectHideFlags: 1
