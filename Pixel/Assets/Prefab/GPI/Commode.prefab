@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 65653055855097028}
   - component: {fileID: 23183445520820250}
   - component: {fileID: 95683405371627184}
-  - component: {fileID: 114281812537247366}
   m_Layer: 0
   m_Name: TiroirBas
   m_TagString: Untagged
@@ -198,15 +197,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1816266081969502}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -23.53, y: 7.83, z: -17.14}
   m_LocalScale: {x: 1, y: 1.6022435, z: 3.5529583}
   m_Children:
   - {fileID: 4680701367451028}
   - {fileID: 4869808740720720}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!4 &4649228101629382
 Transform:
   m_ObjectHideFlags: 1
@@ -626,7 +625,7 @@ Animator:
   m_GameObject: {fileID: 1093100270551222}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a111b3bba801d634b9a8fdeb8b592ffe, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -650,20 +649,6 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
---- !u!114 &114281812537247366
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1093100270551222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 742c9cdc9070aeb4190a2d2f68cdc72e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 0}
-  isUsed: 0
-  isEnabled: 0
 --- !u!114 &114352746065728316
 MonoBehaviour:
   m_ObjectHideFlags: 1

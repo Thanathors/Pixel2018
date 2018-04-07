@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114001956577687430}
   - component: {fileID: 64912444602057628}
   - component: {fileID: 114633817878589894}
+  - component: {fileID: 54555546314475068}
   m_Layer: 0
   m_Name: Lampe
   m_TagString: Untagged
@@ -116,6 +117,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1664595481315168}
   m_Mesh: {fileID: 0}
+--- !u!54 &54555546314475068
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1664595481315168}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!64 &64912444602057628
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -735,3 +751,4 @@ MonoBehaviour:
   isBreakable: 0
   shatteredObject: {fileID: 1073821415329356, guid: 593e73a5969764a4d8c954068564091f,
     type: 2}
+  speed: 0

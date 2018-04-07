@@ -21,12 +21,19 @@ public class Item_Manager : MonoBehaviour {
     {
         if (Vector3.Distance(player.transform.position, gameObject.transform.position) < 5)
         {
-            gameObject.GetComponent<Renderer>().material.shader = highlight_shader;
+            if (gameObject.GetComponent<Renderer>())
+            {
+                gameObject.GetComponent<Renderer>().material.shader = highlight_shader;
+            }
+
         }
 
         else
         {
-            gameObject.transform.gameObject.GetComponent<Renderer>().material.shader = base_shader;
+            if (gameObject.GetComponent<Renderer>())
+            {
+                gameObject.transform.gameObject.GetComponent<Renderer>().material.shader = base_shader;
+            }
         }
 
         //RaycastHit hit;
