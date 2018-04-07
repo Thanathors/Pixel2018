@@ -29,10 +29,10 @@ GameObject:
   - component: {fileID: 54823819506032292}
   m_Layer: 0
   m_Name: Chaise
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &4352262950127190
 Transform:
@@ -40,13 +40,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1425331265663778}
-  m_LocalRotation: {x: -0, y: -0.9996558, z: -0, w: 0.026237192}
-  m_LocalPosition: {x: -19.5, y: 8.25, z: -17.5}
+  m_LocalRotation: {x: -0, y: -0.06278837, z: -0, w: 0.9980269}
+  m_LocalPosition: {x: 6.0012302, y: -4.42, z: 4.8901386}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -176.99301, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -7.2000003, z: 0}
 --- !u!23 &23539344092119870
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -73,7 +73,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 2
+  m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89

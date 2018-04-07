@@ -19,14 +19,11 @@ private void OnTriggerStay(Collider other)
 {
     if (other.tag == "Player")
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (GameController.key_count == 0)
         {
-            if (GameController.key_count == 0)
-            {
-                pop_up.SetActive(true);
-                pop_up.transform.GetChild(0).GetComponent<Text>().text = "You need your key!";
-                Invoke("Pop_up_Disable", 2f);
-            }
+            pop_up.SetActive(true);
+            pop_up.transform.GetChild(0).GetComponent<Text>().text = "You need your key!";
+            Invoke("Pop_up_Disable", 2f);
         }
     }
 }
