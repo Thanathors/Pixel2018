@@ -21,7 +21,6 @@ public class GameController : MonoBehaviour {
     private float ini_timer;
     private Image timer_Img;
     private Image momentum_Img;
-    public static List<bool> achievements;
     public static int total_count;
     public static int painting_fallen;
     public static int chess_count;
@@ -48,11 +47,23 @@ public class GameController : MonoBehaviour {
     private float time_slower = 1f;
     private GameObject item_panel;
     private GameObject pop_up_Achievement;
-    
+    private List<bool> achievements;
 
     private void Awake()
     {
         achievements = new List<bool>();
+        if (Main_Menu_Controller.achievements == null)
+        {
+            for (int i = 0; i <= 16; i++)
+            {
+                achievements.Add(false);
+                Debug.Log(achievements[i]);
+            }
+        }
+        else
+        {
+            achievements = Main_Menu_Controller.achievements;
+        }
         total_count = 0;
         endState = false;
         animal_count = 0;
@@ -90,11 +101,6 @@ public class GameController : MonoBehaviour {
         time_minus = GameObject.Find("time_minus").GetComponent<Text>();
         momentum_Img = GameObject.Find("Momentum_Counter").GetComponent<Image>();
         momentum_Img.fillAmount = 0.5f;
-
-        for (int i = 0; i < 15; i++)
-        {
-            achievements.Add(false);
-        }
     }
 
 
