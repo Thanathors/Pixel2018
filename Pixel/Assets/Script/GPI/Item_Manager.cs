@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Item_Manager : MonoBehaviour {
 
+    private bool iseaten = false;
     public ItemList category;
     private GameObject player;
     private Shader base_shader;
@@ -73,27 +74,6 @@ public class Item_Manager : MonoBehaviour {
                 IsThrown = false;
             }
         }
-
-        //RaycastHit hit;
-        //Vector3 rayDirection = player.transform.position - transform.position;
-        //if (Physics.Raycast(transform.position, rayDirection, out hit))
-        //{
-        //    if (hit.transform.tag == "player")
-        //    {
-        //        Debug.Log("Seen");
-        //    }
-
-        //    else
-        //    {
-        //        Debug.Log("Unseen");
-        //    }
-        //}
-
-        //if (gameObject.transform.parent != null || gameObject.tag != "Debris")
-        //{
-        //    gameObject.transform.position = gameObject.transform.parent.position;
-        //    gameObject.transform.gameObject.GetComponent<Renderer>().material.shader = base_shader;
-        //}
     }
 
     private void FixedUpdate()
@@ -122,5 +102,16 @@ public class Item_Manager : MonoBehaviour {
             m_audio.clip = SoundToPlayWhenPunched;
             m_audio.Play();
         }
+    }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+            if(collision.gameObject.name.Substring(0,4) == "Fish" && iseaten == false && gameObject.name.Substring(0,3) == "Cat")
+            {
+            iseaten = true;
+            GameController.cat_feeded++;
+            Destroy(collision.gameObject);
+            }
     }
 }
