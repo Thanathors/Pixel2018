@@ -213,6 +213,11 @@ public class ScoreScreen_Controller : MonoBehaviour {
             title = "Master of Keys";
             text = "Bring back all three keys.";
         }
+        if (i == 8)
+        {
+            title = "Eaten Alive!";
+            text = "Feed your cat with something special.";
+        }
         if (i == 9)
         {
             title = "Take This!";
