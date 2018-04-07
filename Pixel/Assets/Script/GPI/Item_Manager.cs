@@ -55,16 +55,6 @@ public class Item_Manager : MonoBehaviour {
             }
         }
 
-        /*if(player.GetComponent<Item_Pick_Drop>().ItemBeingHeld != null && player.GetComponent<Item_Pick_Drop>().ItemBeingHeld == gameObject)
-        {
-            GetComponent<Collider>().enabled = false;
-        }
-
-        else
-        {
-            GetComponent<Collider>().enabled = true;
-        }*/
-
         if(IsThrown)
         {
             if (!m_audio.isPlaying && SoundToPlayWhenThrown != null)
