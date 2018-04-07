@@ -14,6 +14,10 @@ public class Smash : MonoBehaviour {
     public int mCombo;
     float nextHit;
 
+    bool isEnabled;
+
+    float timer;
+
     void Start ()
     {
         m_Anim = GetComponent<Animator>();
@@ -21,13 +25,12 @@ public class Smash : MonoBehaviour {
 
     void Update()
     {
-        //BreakCheck();
         Attack();
     }
 
     void Attack()
     {
-        if (Input.GetKeyUp(KeyCode.Mouse0) && Time.time > nextHit && Time.timeScale == 1)
+        if (Input.GetKeyUp(KeyCode.Mouse0) && Time.time > nextHit && Time.timeScale == 1 && !GetComponent<Item_Pick_Drop>().hand_Used && !GetComponent<Throw>().animated)
         {
             if (mCombo == 0)
             {
@@ -43,11 +46,8 @@ public class Smash : MonoBehaviour {
                 mCombo = 0;
             }
         }
-    }
 
-    void BreakCheck()
-    {
-        if (m_Anim.GetBool("Smash") == true || m_Anim.GetBool("Slap") == true)
+        if (m_Anim.GetCurrentAnimatorStateInfo(0).IsName("Slapping") || m_Anim.GetCurrentAnimatorStateInfo(0).IsName("Smashing")) 
         {
             breaking = true;
         }

@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class Item_Pick_Drop : MonoBehaviour {
 
-    private bool hand_Used = false;
+    [HideInInspector]
+    public bool hand_Used = false;
+    Animator m_Anim;
 
-    // Update is called once per frame
+    void Start()
+    {
+        m_Anim = GetComponent<Animator>();
+    }
+
     void Update()
     {
         RaycastHit hit;
@@ -41,6 +47,8 @@ public class Item_Pick_Drop : MonoBehaviour {
             gameObject.transform.GetChild(0).GetChild(0).GetChild(0).transform.parent = null;
             hand_Used = false;
         }
+
+        m_Anim.SetBool("Holding", hand_Used);
     }
     void Unused_hand()
     {
