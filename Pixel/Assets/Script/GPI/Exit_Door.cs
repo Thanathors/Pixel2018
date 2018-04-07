@@ -4,51 +4,48 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Exit_Door : MonoBehaviour {
+public class Exit_Door : MonoBehaviour
+{
 
-    private GameObject pop_up;
+private GameObject pop_up;
 
-	// Use this for initialization
-	void Start () {
-        pop_up = GameObject.Find("Pop_up");
-        pop_up.SetActive(false);
-	}
+void Start()
+{
+    pop_up = GameObject.Find("Pop_up");
+    pop_up.SetActive(false);
+}
 
-    private void OnTriggerStay(Collider other)
+private void OnTriggerStay(Collider other)
+{
+    if (other.tag == "Player")
     {
-        if(other.tag == "Player")
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (GameController.key_count == 0)
             {
-                if(GameController.key_count == 0)
-                {
-                    pop_up.SetActive(true);
-                    pop_up.transform.GetChild(0).GetComponent<Text>().text = "You need your key!";
-                    Invoke("Pop_up_Disable", 2f);
-                }
-                else
-                {
-                    GameController.endState = 1;
-                }
+                pop_up.SetActive(true);
+                pop_up.transform.GetChild(0).GetComponent<Text>().text = "You need your key!";
+                Invoke("Pop_up_Disable", 2f);
             }
         }
     }
+}
 
-    private void Pop_up_Disable()
-    {
-        pop_up.SetActive(false);
-    }
+private void Pop_up_Disable()
+{
+    pop_up.SetActive(false);
+}
 
-    private void OnTriggerEnter(Collider other)
+private void OnTriggerEnter(Collider other)
+{
+    if (other.gameObject.GetComponent<Item_Manager>())
     {
-        if (other.gameObject.GetComponent<Item_Manager>())
+        if (other.gameObject.GetComponent<Item_Manager>().category == ItemList.Key)
         {
-            if(other.gameObject.GetComponent<Item_Manager>().category == ItemList.Key)
-            {
-                GameController.key_count++;
-                other.gameObject.SetActive(false);
-                Destroy(gameObject);
-            }
+            GameController.key_count++;
+            other.gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
+}
 }
