@@ -16,6 +16,8 @@ public class ScoreScreen_Controller : MonoBehaviour {
     private Slider slider;
     private Text stormRank;
     private GameObject hint;
+    private int totalScore;
+
 
     private void Start()
     {
@@ -36,34 +38,8 @@ public class ScoreScreen_Controller : MonoBehaviour {
         obj_collected_text = GameObject.Find("Object_Collected_text").GetComponent<Text>();
         obj_destroyed_text = GameObject.Find("Object_Destroyed_text").GetComponent<Text>();
         stormRank = GameObject.Find("Rank_text").GetComponent<Text>();
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        timer += Time.deltaTime;
-        obj_collected_text.text = (GameController.total_count).ToString();
-        obj_destroyed_text.text = GameController.broken_item_count.ToString();
-
-        if (GameController.endState == 1)
-        {
-            award = "To The Point";
-            Award_Des_txt.text = "Picked up Wallet and left.";
-        }
-        if(GameController.endState == 2)
-        {
-            award = "Lost Credibility";
-            Award_Des_txt.text = "Took too much time.";
-        }
-        //script needed
-        if (GameController.endState == 3)
-        {
-            award = "Alternate Exit";
-            Award_Des_txt.text = "Exit through a window.";
-        }
-        Award_txt.text = award;
-
-        if(GameController.broken_item_count < 9)
+        if (GameController.broken_item_count < 9)
         {
             score += 1;
         }
@@ -92,13 +68,21 @@ public class ScoreScreen_Controller : MonoBehaviour {
             score += 7;
         }
 
-        int value = GameController.total_count;
+        totalScore += GameController.key_count * 3;
+        totalScore += GameController.animal_count * 13;
+        totalScore += GameController.cloth_count * 12;
+        totalScore += GameController.wallet_count * 2;
+        totalScore += GameController.trivia_count * 1;
+        Debug.Log(totalScore);
+
+        int value = totalScore;
+
 
         if (value < 35)
         {
             score += 1;
         }
-        else if(value >= 35 && value < 70)
+        else if (value >= 35 && value < 70)
         {
             score += 2;
         }
@@ -122,6 +106,34 @@ public class ScoreScreen_Controller : MonoBehaviour {
         {
             score += 7;
         }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        timer += Time.deltaTime;
+        obj_collected_text.text = (GameController.total_count).ToString();
+        obj_destroyed_text.text = GameController.broken_item_count.ToString();
+
+        if (GameController.endState == 1)
+        {
+            award = "To The Point";
+            Award_Des_txt.text = "Picked up Wallet and left.";
+        }
+        if(GameController.endState == 2)
+        {
+            award = "Lost Credibility";
+            Award_Des_txt.text = "Took too much time.";
+        }
+        //script needed
+        if (GameController.endState == 3)
+        {
+            award = "Alternate Exit";
+            Award_Des_txt.text = "Exit through a window.";
+        }
+        Award_txt.text = award;
+
+        
 
 
         if (score < 2)
@@ -131,25 +143,25 @@ public class ScoreScreen_Controller : MonoBehaviour {
         }
         else if(score >=2 && score < 3)
         {
-            stormRank.text = "Storm Out";
+            stormRank.text = "Meh Storm";
             //Storm Out
         }
         else if (score >= 3 && score < 4)
         {
             stormRank.text = "Okay Storm";
-            //Ok Storm
+            //Okay Storm
         }
-        else if (score >= 4 && score < 6)
+        else if (score >= 4 && score < 5)
         {
             stormRank.text = "Good Storm";
             //Good Storm
         }
-        else if (score >= 6 && score < 7)
+        else if (score >= 5 && score < 6)
         {
             stormRank.text = "Epic Storm";
             //Epic Storm
         }
-        else if(score >= 7 && score < 14)
+        else if(score >= 6 && score < 7)
         {
             stormRank.text = "Perfect Storm";
             //Perfect Storm
@@ -158,12 +170,6 @@ public class ScoreScreen_Controller : MonoBehaviour {
         {
             stormRank.text = "Darude Sandstorm";
             //Perfect Storm
-        }
-
-
-        if (timer > 10)
-        {
-            SceneManager.LoadScene(0);
         }
     }
 

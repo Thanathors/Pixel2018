@@ -123,13 +123,13 @@ public class GameController : MonoBehaviour {
 
         if(momentum_Img.fillAmount == 0 && timer > 0)
         {
-            time_minus.text = "-5";
+            time_minus.text = "x5";
             time_minus.color = new Color(1, 0, 0);
             timer -= .07f;
         }
         else if (momentum_Img.fillAmount > 0)
         {
-            time_minus.text = "-1";
+            time_minus.text = "x1";
             time_minus.color = new Color(0, 1, 0);
             time_slower = 0;
         }
