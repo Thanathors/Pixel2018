@@ -25,7 +25,6 @@ GameObject:
   - component: {fileID: 114829227106616400}
   - component: {fileID: 54886803941652400}
   - component: {fileID: 82790228823660890}
-  - component: {fileID: 114925610627000822}
   - component: {fileID: 114325736225097142}
   m_Layer: 0
   m_Name: Oreiller2
@@ -41,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1492098058601964}
   m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -18.17822, y: 8.282, z: 1.9928474}
+  m_LocalPosition: {x: -19.186, y: 8.282, z: 1.9928474}
   m_LocalScale: {x: 0.51556057, y: 0.64390063, z: 0.2029894}
   m_Children: []
   m_Father: {fileID: 0}
@@ -219,15 +218,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   category: 0
---- !u!114 &114925610627000822
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1492098058601964}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba965f29c69c1424b9cd5928027b2b5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clothes: {fileID: 0}
+  SoundToPlayWhenPunched: {fileID: 8300000, guid: 642749b366aa2ce4186336f06ace1cd7,
+    type: 3}

@@ -61,7 +61,6 @@ GameObject:
   - component: {fileID: 54938442087093664}
   - component: {fileID: 114181827526380026}
   - component: {fileID: 82581784775937330}
-  - component: {fileID: 114598738422250918}
   m_Layer: 0
   m_Name: Speaker
   m_TagString: Item
@@ -270,7 +269,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6ff15657713786542b7e7427a57c3c64, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -352,18 +351,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   category: 4
---- !u!114 &114598738422250918
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1998930720112638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba965f29c69c1424b9cd5928027b2b5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clothes: {fileID: 0}
+  SoundToPlayWhenPunched: {fileID: 8300000, guid: 6ff15657713786542b7e7427a57c3c64,
+    type: 3}
 --- !u!136 &136084017547992578
 CapsuleCollider:
   m_ObjectHideFlags: 1

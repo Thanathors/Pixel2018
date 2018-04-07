@@ -866,6 +866,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   category: 4
+  SoundToPlayWhenPunched: {fileID: 8300000, guid: 6ff15657713786542b7e7427a57c3c64,
+    type: 3}
 --- !u!136 &136015329736588686
 CapsuleCollider:
   m_ObjectHideFlags: 1

@@ -28,7 +28,6 @@ GameObject:
   - component: {fileID: 114393371158272756}
   - component: {fileID: 54152296479745630}
   - component: {fileID: 82527558767310164}
-  - component: {fileID: 114773633701734070}
   m_Layer: 0
   m_Name: Bottle
   m_TagString: Item
@@ -43,7 +42,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1261203465511312}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -35.366, y: 8.1, z: -6.429}
+  m_LocalPosition: {x: -8.06, y: 2.1, z: -3.595}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -223,6 +222,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   category: 4
+  SoundToPlayWhenPunched: {fileID: 8300000, guid: 7905c9be23f96b64cbb33d4a6e645b4f,
+    type: 3}
 --- !u!114 &114562144988215758
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6555,18 +6556,6 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
---- !u!114 &114773633701734070
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1261203465511312}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba965f29c69c1424b9cd5928027b2b5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clothes: {fileID: 0}
 --- !u!114 &114998689213066324
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6582,3 +6571,5 @@ MonoBehaviour:
   shatteredObject: {fileID: 1697809902769522, guid: ab6afe4b4fa22664da9545475aaa25d3,
     type: 2}
   speed: 0
+  SoundToPlayWhenBreaking: {fileID: 8300000, guid: 69fa549ad39a99449880f1ed16a49b62,
+    type: 3}

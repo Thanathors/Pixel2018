@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 114651613962469998}
   - component: {fileID: 65246026399293592}
   - component: {fileID: 54127791979814622}
+  - component: {fileID: 82563678326070418}
   m_Layer: 0
   m_Name: Aquarium
   m_TagString: Untagged
@@ -47,7 +48,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!1 &1625664160028274
 GameObject:
@@ -68,7 +69,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!1 &1903778545959988
 GameObject:
@@ -88,7 +89,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &4020846649820542
 Transform:
@@ -356,6 +357,86 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3, y: 2, z: 2}
   m_Center: {x: 1.5, y: 1, z: -1}
+--- !u!82 &82563678326070418
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1008895995430028}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 85dcee2ca9ec45f4da0e02942ecc7eea, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114036307360684730
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -419,7 +500,7 @@ MonoBehaviour:
       offset: {x: 0, y: 0}
       rotation: 0
       justify: 0
-      localPivot: {x: 1.5, y: 0.5}
+      localPivot: {x: 1.6015811, y: 0.5}
       localSize: {x: 0, y: 0}
       anchor: 9
     _mat: {fileID: 2100000, guid: e79130c5c439f3840b9d40490aa3217d, type: 2}
@@ -448,7 +529,7 @@ MonoBehaviour:
       offset: {x: 0, y: 0}
       rotation: 0
       justify: 0
-      localPivot: {x: 1, y: 0.5}
+      localPivot: {x: 0.94775593, y: 0.4858557}
       localSize: {x: 0, y: 0}
       anchor: 9
     _mat: {fileID: 2100000, guid: e79130c5c439f3840b9d40490aa3217d, type: 2}
@@ -477,7 +558,7 @@ MonoBehaviour:
       offset: {x: 0, y: 0}
       rotation: 0
       justify: 0
-      localPivot: {x: 1.5, y: -1}
+      localPivot: {x: 1.5762955, y: -0.9733033}
       localSize: {x: 0, y: 0}
       anchor: 9
     _mat: {fileID: 2100000, guid: a7508e42c83871a4dad3ae344a7f61b8, type: 2}
@@ -506,7 +587,7 @@ MonoBehaviour:
       offset: {x: 0, y: 0}
       rotation: 0
       justify: 0
-      localPivot: {x: -1.5, y: -1}
+      localPivot: {x: -1.5666438, y: -0.9733033}
       localSize: {x: 0, y: 0}
       anchor: 9
     _mat: {fileID: 2100000, guid: a7508e42c83871a4dad3ae344a7f61b8, type: 2}
@@ -528,41 +609,41 @@ MonoBehaviour:
   - {x: 3, y: 1, z: 0}
   - {x: 3, y: 1, z: -2}
   - {x: 3, y: 0, z: -2}
-  - {x: 0, y: 0, z: -2}
+  - {x: 0.13328777, y: 0, z: -1.9489052}
   - {x: 3, y: 1, z: -2}
-  - {x: 0, y: 1, z: -2}
-  - {x: 0, y: 0, z: -2}
-  - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 1, z: -2}
-  - {x: 0, y: 1, z: 0}
-  - {x: 0, y: 1, z: 0}
+  - {x: 0.13328777, y: 0.9717114, z: -1.9489052}
+  - {x: 0.13328777, y: 0, z: -1.9489052}
+  - {x: 0.13328777, y: 0, z: 0.053393364}
+  - {x: 0.13328777, y: 0.9717114, z: -1.9489052}
+  - {x: 0.13328777, y: 0.9717114, z: 0.053393364}
+  - {x: 0.13328777, y: 0.9717114, z: 0.053393364}
   - {x: 3, y: 1, z: 0}
-  - {x: 0, y: 1, z: -2}
+  - {x: 0.13328777, y: 0.9717114, z: -1.9489052}
   - {x: 3, y: 1, z: -2}
-  - {x: 0, y: 0, z: -2}
+  - {x: 0.13328777, y: 0, z: -1.9489052}
   - {x: 3, y: 0, z: -2}
-  - {x: 0, y: 0, z: 0}
+  - {x: 0.13328777, y: 0, z: 0.053393364}
   - {x: 3, y: 0, z: 0}
   _uv:
   - {x: 0, y: 0}
   - {x: -2, y: 0}
   - {x: 0, y: 1}
   - {x: -2, y: 1}
-  - {x: 3, y: 0}
-  - {x: 0, y: 0}
-  - {x: 3, y: 1}
-  - {x: 0, y: 1}
-  - {x: 2, y: 0}
-  - {x: 0, y: 0}
-  - {x: 2, y: 1}
-  - {x: 0, y: 1}
-  - {x: 0, y: 0}
-  - {x: 3, y: 0}
-  - {x: 0, y: -2}
-  - {x: 3, y: -2}
-  - {x: 0, y: -2}
+  - {x: 3.0351648, y: 0}
+  - {x: 0.16799736, y: 0}
+  - {x: 3.0351648, y: 1}
+  - {x: 0.16799736, y: 0.9717114}
+  - {x: 1.9489052, y: 0}
+  - {x: -0.053393364, y: 0}
+  - {x: 1.9489052, y: 0.9717114}
+  - {x: -0.053393364, y: 0.9717114}
+  - {x: 0.14286962, y: 0.053393364}
+  - {x: 3.0097213, y: 0}
+  - {x: 0.14286962, y: -1.9489052}
+  - {x: 3.0097213, y: -2}
+  - {x: -0.13328777, y: -1.9489052}
   - {x: -3, y: -2}
-  - {x: 0, y: 0}
+  - {x: -0.13328777, y: 0.053393364}
   - {x: -3, y: 0}
   _uv3: []
   _uv4: []
@@ -9245,6 +9326,9 @@ MonoBehaviour:
   isBreakable: 0
   shatteredObject: {fileID: 1123082523305254, guid: d73cfc04fd1568e4a8ce7274d781be6b,
     type: 2}
+  speed: 0
+  SoundToPlayWhenBreaking: {fileID: 8300000, guid: 2fb888da6c8546843859f39449c17eaa,
+    type: 3}
 --- !u!114 &114763695663407380
 MonoBehaviour:
   m_ObjectHideFlags: 1
