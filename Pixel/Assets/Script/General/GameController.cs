@@ -123,7 +123,7 @@ public class GameController : MonoBehaviour {
         if(total_temp != (total_count + broken_item_count))
         {
             total_temp = total_count + broken_item_count;
-            momentum_Img.fillAmount += 0.10f;
+            momentum_Img.fillAmount += 0.15f;
         }
 
         if(momentum_Img.fillAmount == 0 && timer > 0)
