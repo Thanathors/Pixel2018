@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Scene/Main_Menu.unity
+    path: Assets/_Scene/Menus/Main_Menu.unity
     guid: e8630ae861c6abc4c8b4200815927abd
   - enabled: 1
-    path: Assets/_Scene/Loading.unity
+    path: Assets/_Scene/Menus/Loading.unity
     guid: d236084343ed2604981bc5bfc24f5b7a
   - enabled: 1
     path: Assets/_Scene/Gym_Jay.unity
@@ -17,3 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scene/ScoreScreen.unity
     guid: 1813850e5ae8a2e4e861ae65a8baf2dd
+  - enabled: 1
+    path: Assets/_Scene/Menus/Credits_Menu.unity
+    guid: 2169fba9ae8905c41b55c37c6e9cd54a
