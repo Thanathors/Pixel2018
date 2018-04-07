@@ -73,9 +73,6 @@ public class GameController : MonoBehaviour {
             timer -= Time.deltaTime;
         }
 
-	}
-	
-	void Update () {
         timer -= Time.deltaTime;
         timer_Img.fillAmount = timer / ini_timer;
 
