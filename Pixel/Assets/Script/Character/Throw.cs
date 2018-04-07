@@ -33,7 +33,7 @@ public class Throw : MonoBehaviour {
             item = gameObject.transform.GetChild(0).GetChild(0).GetChild(0).gameObject;
             item.GetComponent<Rigidbody>().isKinematic = false;
             item.gameObject.transform.parent = null;
-            item.GetComponent<Rigidbody>().AddForce((Camera.main.transform.forward) * 25, ForceMode.Impulse);
+            item.GetComponent<Rigidbody>().AddForce((Camera.main.transform.forward) * 17.5f, ForceMode.Impulse);
         }
 
         animated = false;

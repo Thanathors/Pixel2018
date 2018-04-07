@@ -27,6 +27,7 @@ public class Item_Pick_Drop : MonoBehaviour {
                     if (Input.GetKeyDown(KeyCode.Mouse1) && hand_Used == false)
                     {
                         hit.transform.parent = gameObject.transform.GetChild(0).GetChild(0).transform;
+                        hit.transform.position = hit.transform.parent.position;
                         hit.transform.localRotation = new Quaternion(0, 0, 0, 0);
                         hit.transform.gameObject.GetComponent<Rigidbody>().isKinematic = true;
                         Invoke("Unused_hand", 0.1f);
