@@ -32,7 +32,7 @@ GameObject:
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &4322578505554742
 Transform:
@@ -41,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1277901884200306}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -36.148, y: 2.077, z: -0.591}
+  m_LocalPosition: {x: -26.516, y: 2.168, z: -3.635}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -113,8 +113,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.3999977, y: 0.0435977, z: 0.38042265}
-  m_Center: {x: -0.19999886, y: -0.025201082, z: 0.000000029802322}
+  m_Size: {x: 0.3999977, y: 0.10157037, z: 0.38042265}
+  m_Center: {x: -0.19999886, y: 0.0037852526, z: 0.000000029802322}
 --- !u!114 &114247148460501880
 MonoBehaviour:
   m_ObjectHideFlags: 1
