@@ -16,7 +16,7 @@ public enum ItemList
 
 public class GameController : MonoBehaviour {
 
-    public static bool endState;
+    public static int endState;
     public float timer = 60f;
     private float ini_timer;
     private Image timer_Img;
@@ -64,7 +64,7 @@ public class GameController : MonoBehaviour {
             achievements = Main_Menu_Controller.achievements;
         }
         total_count = 0;
-        endState = false;
+        endState = 0;
         animal_count = 0;
         cat_count = 0;
         fish_count = 0;
@@ -99,7 +99,7 @@ public class GameController : MonoBehaviour {
         timer_text = GameObject.Find("timer_txt").GetComponent<Text>();
         time_minus = GameObject.Find("time_minus").GetComponent<Text>();
         momentum_Img = GameObject.Find("Momentum_Counter").GetComponent<Image>();
-        momentum_Img.fillAmount = 0.5f;
+        momentum_Img.fillAmount = 0.2f;
     }
 
 
@@ -107,7 +107,7 @@ public class GameController : MonoBehaviour {
         if(timer >= 0)
         {
             timer -= Time.deltaTime;
-            momentum_Img.fillAmount -= 0.0002f;
+            momentum_Img.fillAmount -= 0.001f;
         }
         AchievementChecker();
         timer_text.text = "Time left :" + Mathf.Round(timer).ToString();
@@ -116,7 +116,7 @@ public class GameController : MonoBehaviour {
         if(total_temp != (total_count + broken_item_count))
         {
             total_temp = total_count + broken_item_count;
-            momentum_Img.fillAmount += 0.05f;
+            momentum_Img.fillAmount += 0.10f;
         }
 
         if(momentum_Img.fillAmount == 0 && timer > 0)
@@ -141,19 +141,16 @@ public class GameController : MonoBehaviour {
         broken_text.text = "Broken:" + broken_item_count.ToString();
 #endif
 
-        if (timer <= 0 || endState == true)
+        if(endState == 1)
         {
-            if (endState == true)
-            {
-                Invoke("Score", 3f);
-
-            }
-            if (timer <= 0)
-            {
-                total_count = -1;
-                Invoke("Score", 2f);
-            }
+            Invoke("Score", 1f);
         }
+
+        if (timer <= 0)
+        {
+            endState = 2;
+            Invoke("Score", 1f);
+        }      
     }
 
     void Score()
