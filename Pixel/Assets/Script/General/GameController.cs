@@ -123,9 +123,11 @@ public class GameController : MonoBehaviour {
             }
         }
 
-        if (broken_item_count == 20)
+        if (broken_item_count == 2)
         {
             pop_up_Achievement.SetActive(true);
+            pop_up_Achievement.transform.GetChild(0).GetComponent<Text>().text = "test";
+            Invoke("Achievement_FadeOut", 3f);
             /*award = "Take this!";
             Award_Des_txt.text = "Break a lot of thing in the house";*/
         }
@@ -134,5 +136,10 @@ public class GameController : MonoBehaviour {
     void Score()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+    }
+
+    void Achievement_FadeOut()
+    {
+        pop_up_Achievement.SetActive(false);
     }
 }
