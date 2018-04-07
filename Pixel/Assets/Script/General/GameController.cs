@@ -17,7 +17,7 @@ public enum ItemList
 public class GameController : MonoBehaviour {
 
     public static bool endState;
-    public float timer = 10f;
+    public float timer = 60f;
     private float ini_timer;
     private Image timer_Img;
     private Image momentum_Img;
@@ -72,10 +72,6 @@ public class GameController : MonoBehaviour {
         {
             timer -= Time.deltaTime;
         }
-
-        timer -= Time.deltaTime;
-        timer_Img.fillAmount = timer / ini_timer;
-
         timer_text.text = "Time left :" + Mathf.Round(timer).ToString();
         momentum_Img.color = new Color((-(momentum_Img.fillAmount) + 1), momentum_Img.fillAmount, 0);
         if(momentum_Img.fillAmount == 0 && timer > 0)

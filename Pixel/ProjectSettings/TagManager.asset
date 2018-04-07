@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Valise
   - Item
+  - Debris
   layers:
   - Default
   - TransparentFX
