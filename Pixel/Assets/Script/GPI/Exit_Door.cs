@@ -13,11 +13,6 @@ public class Exit_Door : MonoBehaviour {
         pop_up = GameObject.Find("Pop_up");
         pop_up.SetActive(false);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     private void OnTriggerStay(Collider other)
     {
@@ -42,5 +37,17 @@ public class Exit_Door : MonoBehaviour {
     private void Pop_up_Disable()
     {
         pop_up.SetActive(false);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.GetComponent<Item_Manager>())
+        {
+            if(other.gameObject.GetComponent<Item_Manager>().category == ItemList.Key)
+            {
+                GameController.key_count++;
+                Destroy(gameObject);
+            }
+        }
     }
 }
