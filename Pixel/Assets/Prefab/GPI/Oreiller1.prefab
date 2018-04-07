@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 54928160575280356}
   - component: {fileID: 114521008092242110}
   - component: {fileID: 82438180067118014}
+  - component: {fileID: 114347312542592438}
   m_Layer: 0
   m_Name: Oreiller1
   m_TagString: Item
@@ -193,6 +194,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!114 &114347312542592438
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1308403375657098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23fa698560b688845bf08bafe6dc1b28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AdditionalVertexStreamMesh: {fileID: 0}
 --- !u!114 &114521008092242110
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -205,5 +218,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   category: 0
-  SoundToPlayWhenPunched: {fileID: 8300000, guid: 642749b366aa2ce4186336f06ace1cd7,
+  SoundToPlayWhenPunched: {fileID: 8300000, guid: 3f436d42fccd0984ba8df70c5b18a920,
     type: 3}
