@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Item_Pick_Drop : MonoBehaviour {
 
-    [HideInInspector]
+    [ReadOnly]
     public bool hand_Used = false;
     Animator m_Anim;
+    [ReadOnly]
+    public GameObject ItemBeingHeld;
 
     void Start()
     {
@@ -28,6 +30,7 @@ public class Item_Pick_Drop : MonoBehaviour {
                     {
                         hit.transform.parent = gameObject.transform.GetChild(0).GetChild(0).transform;
                         hit.transform.position = hit.transform.parent.position;
+                        ItemBeingHeld = hit.transform.gameObject;
                         hit.transform.localRotation = new Quaternion(0, 0, 0, 0);
                         hit.transform.gameObject.GetComponent<Rigidbody>().isKinematic = true;
                         Invoke("Unused_hand", 0.1f);
@@ -39,6 +42,7 @@ public class Item_Pick_Drop : MonoBehaviour {
         if(gameObject.transform.GetChild(0).GetChild(0).childCount == 0)
         {
             hand_Used = false;
+            ItemBeingHeld = null;
         }
 
 
@@ -47,9 +51,14 @@ public class Item_Pick_Drop : MonoBehaviour {
             gameObject.transform.GetChild(0).GetChild(0).GetChild(0).gameObject.GetComponent<Rigidbody>().isKinematic = false; 
             gameObject.transform.GetChild(0).GetChild(0).GetChild(0).transform.parent = null;
             hand_Used = false;
+            ItemBeingHeld = null;
         }
 
         m_Anim.SetBool("Holding", hand_Used);
+
+        if (ItemBeingHeld != null)
+        {
+        }
     }
     void Unused_hand()
     {

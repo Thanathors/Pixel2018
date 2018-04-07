@@ -10,15 +10,15 @@ public class Detection_item : MonoBehaviour {
         {
             if(other.gameObject.GetComponent<Item_Manager>().category == ItemList.Cloth)
             {
-                GameController.cloth_count++;
+                GameController.cloth_count = GameController.cloth_count + 12;
             }
             if (other.gameObject.GetComponent<Item_Manager>().category == ItemList.Key)
             {
-                GameController.key_count++;
+                GameController.key_count = GameController.key_count + 3;
             }
             if (other.gameObject.GetComponent<Item_Manager>().category == ItemList.Wallet)
             {
-                GameController.wallet_count++;
+                GameController.wallet_count = GameController.wallet_count + 2;
             }
             if (other.gameObject.GetComponent<Item_Manager>().category == ItemList.Trivia)
             {

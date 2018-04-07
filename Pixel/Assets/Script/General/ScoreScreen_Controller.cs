@@ -63,80 +63,103 @@ public class ScoreScreen_Controller : MonoBehaviour {
         }
         Award_txt.text = award;
 
-        if(GameController.broken_item_count < 1)
+        if(GameController.broken_item_count < 9)
         {
             score += 1;
         }
-        else if (GameController.broken_item_count >= 1 && GameController.broken_item_count < 2)
+        else if (GameController.broken_item_count >= 9 && GameController.broken_item_count < 18)
         {
             score += 2;
         }
-        else if (GameController.broken_item_count >= 1 && GameController.broken_item_count < 2)
+        else if (GameController.broken_item_count >= 18 && GameController.broken_item_count < 27)
         {
             score += 3;
         }
-        else if (GameController.broken_item_count >= 2 && GameController.broken_item_count < 3)
+        else if (GameController.broken_item_count >= 27 && GameController.broken_item_count < 36)
         {
             score += 4;
         }
-        else if (GameController.broken_item_count >= 3 && GameController.broken_item_count < 4)
+        else if (GameController.broken_item_count >= 36 && GameController.broken_item_count < 45)
         {
             score += 5;
+        }
+        else if (GameController.broken_item_count >= 45 && GameController.broken_item_count < 54)
+        {
+            score += 6;
+        }
+        else if (GameController.broken_item_count >= 54 && GameController.broken_item_count > 54)
+        {
+            score += 7;
         }
 
         int value = GameController.total_count;
 
-        if (value < 1)
+        if (value < 35)
         {
             score += 1;
         }
-        else if(value >= 1 && value < 2)
+        else if(value >= 35 && value < 70)
         {
             score += 2;
         }
-        else if (value >= 2 && value < 3)
+        else if (value >= 70 && value < 105)
         {
             score += 3;
         }
-        else if (value >= 3 && value < 4)
+        else if (value >= 105 && value < 140)
         {
             score += 4;
         }
-        else if (value >= 4 && value < 5)
+        else if (value >= 175 && value < 210)
         {
             score += 5;
         }
+        else if (value >= 210 && value < 245)
+        {
+            score += 6;
+        }
+        else if (value >= 280 && value > 280)
+        {
+            score += 7;
+        }
 
 
-        if(score < 3)
+        if (score < 2)
         {
             stormRank.text = "Baby Storm"; 
             //Baby Storm
         }
-        else if(score >=3 && score < 5)
+        else if(score >=2 && score < 3)
         {
             stormRank.text = "Storm Out";
             //Storm Out
         }
-        else if (score >= 5 && score < 7)
+        else if (score >= 3 && score < 4)
         {
-            stormRank.text = "Ok Storm";
+            stormRank.text = "Okay Storm";
             //Ok Storm
         }
-        else if (score >= 7 && score < 9)
+        else if (score >= 4 && score < 6)
         {
             stormRank.text = "Good Storm";
             //Good Storm
         }
-        else if(score ==9)
+        else if (score >= 6 && score < 7)
         {
             stormRank.text = "Epic Storm";
             //Epic Storm
-        }else if(score == 10)
+        }
+        else if(score >= 7 && score < 14)
         {
             stormRank.text = "Perfect Storm";
             //Perfect Storm
         }
+        else if (score == 14)
+        {
+            stormRank.text = "Darude Sandstorm";
+            //Perfect Storm
+        }
+
 
         if (timer > 10)
         {
