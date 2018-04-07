@@ -27,13 +27,12 @@ GameObject:
   - component: {fileID: 114998689213066324}
   - component: {fileID: 114393371158272756}
   - component: {fileID: 54152296479745630}
-  - component: {fileID: 82527558767310164}
   m_Layer: 0
   m_Name: Bottle
   m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &4866569636076086
 Transform:
@@ -42,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1261203465511312}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.06, y: 2.1, z: -3.595}
+  m_LocalPosition: {x: -36.308, y: 8.1, z: -6.851}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -142,7 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   category: 4
-  SoundToPlayWhenPunched: {fileID: 8300000, guid: 7905c9be23f96b64cbb33d4a6e645b4f,
+  SoundToPlayWhenPunched: {fileID: 8300000, guid: ab8552d091a41a047812890c31095454,
     type: 3}
 --- !u!114 &114562144988215758
 MonoBehaviour:

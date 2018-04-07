@@ -1376,7 +1376,7 @@ MonoBehaviour:
   m_selectedTriangles: 
 --- !u!114 &114384445882004504
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1743662961913658}
