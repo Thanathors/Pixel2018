@@ -2,15 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
+
 public class Item_Manager : MonoBehaviour {
 
     public ItemList category;
     private GameObject player;
     private Shader base_shader;
     private Shader highlight_shader;
+    public AudioClip SoundToPlayWhenPunched;
+    AudioSource m_audio;
 
     void Start ()
     {
+        m_audio = gameObject.AddComponent<AudioSource>();
         player = GameObject.FindGameObjectWithTag("Player");
         base_shader = Shader.Find("Standard");
         highlight_shader = Shader.Find("Outlined/Silhouetted Diffuse");
@@ -69,10 +74,20 @@ public class Item_Manager : MonoBehaviour {
             {
                 if (Vector3.Distance(transform.position, player.transform.position) < 2f && player.GetComponent<Smash>().breaking)
                 {
-                    GetComponent<Rigidbody>().AddForce((Camera.main.transform.forward) * 7.5f, ForceMode.Impulse);
-                    GetComponent<Rigidbody>().AddForce((Camera.main.transform.up) * 2f, ForceMode.Impulse);
+                    Invoke("PushPunch", 0f);
                 }
             }
+        }
+    }
+
+    void PushPunch()
+    {
+        GetComponent<Rigidbody>().AddForce((Camera.main.transform.forward) * 7.5f, ForceMode.Impulse);
+        GetComponent<Rigidbody>().AddForce((Camera.main.transform.up) * 2f, ForceMode.Impulse);
+        if(!m_audio.isPlaying)
+        {
+            m_audio.clip = SoundToPlayWhenPunched;
+            m_audio.Play();
         }
     }
 }

@@ -8,12 +8,27 @@ public class ShatterManager : MonoBehaviour {
     public GameObject shatteredObject;
     [ReadOnly]
     public float speed;
+    AudioSource m_audio;
+    public AudioClip SoundToPlayWhenBreaking;
+    
+    void Start()
+    {
+        if(!GetComponent<AudioSource>())
+        {
+            m_audio = gameObject.AddComponent<AudioSource>();
+        }
+    }
 
     void Update()
     {
         if (isBreakable)
         {
             Instantiate(shatteredObject, transform.position, transform.rotation);
+            if(!m_audio.isPlaying)
+            {
+                m_audio.clip = SoundToPlayWhenBreaking;
+                m_audio.Play();
+            }
             Destroy(gameObject);
         }
     }

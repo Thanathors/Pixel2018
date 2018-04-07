@@ -240,3 +240,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   category: 4
+  SoundToPlayWhenPunched: {fileID: 8300000, guid: ee5d6af898d3d584cbf5ab5faf603b5a,
+    type: 3}
