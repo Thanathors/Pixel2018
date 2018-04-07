@@ -5,7 +5,9 @@ licenseType: Free
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - SoundToPlayWhenPunched: {fileID: 8300000, guid: 819a3b2173601b542b10f4de3284e8ee,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

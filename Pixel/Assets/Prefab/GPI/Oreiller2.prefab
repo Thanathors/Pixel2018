@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 23113870391352028}
   - component: {fileID: 114829227106616400}
   - component: {fileID: 54886803941652400}
+  - component: {fileID: 82790228823660890}
+  - component: {fileID: 114325736225097142}
   m_Layer: 0
   m_Name: Oreiller2
   m_TagString: Item
@@ -124,3 +126,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   category: 0
+  SoundToPlayWhenPunched: {fileID: 8300000, guid: 642749b366aa2ce4186336f06ace1cd7,
+    type: 3}
