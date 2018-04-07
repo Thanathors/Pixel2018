@@ -13,8 +13,6 @@ public class ScoreScreen_Controller : MonoBehaviour {
     private Text obj_collected_text;
     private Text obj_destroyed_text;
     private int score = 0;
-    private Slider slider;
-    private Text stormRank;
 
     private void Start()
     {
@@ -22,7 +20,6 @@ public class ScoreScreen_Controller : MonoBehaviour {
         Award_Des_txt = GameObject.Find("Award_Description").GetComponent<Text>();
         obj_collected_text = GameObject.Find("Object_Collected_text").GetComponent<Text>();
         obj_destroyed_text = GameObject.Find("Object_Destroyed_text").GetComponent<Text>();
-        stormRank = GameObject.Find("Rank_text").GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -34,13 +31,13 @@ public class ScoreScreen_Controller : MonoBehaviour {
 
         if (GameController.total_count == 1)
         {
-            award = "To The Point";
-            Award_Des_txt.text = "Picked up Wallet and left.";
+            award = "Gotta go fast!";
+            Award_Des_txt.text = "Leave the house without picking anything.";
         }
         if(GameController.total_count == -1)
         {
-            award = "Lost Credibility";
-            Award_Des_txt.text = "Took too much time.";
+            award = "Nobody care anymore...";
+            Award_Des_txt.text = "Take too much time to storm-out.";
         }
         //script needed
         if (GameController.total_count == 10000)
@@ -97,35 +94,29 @@ public class ScoreScreen_Controller : MonoBehaviour {
 
         if(score < 3)
         {
-            stormRank.text = "Baby Storm"; 
             //Baby Storm
         }
         else if(score >=3 && score < 5)
         {
-            stormRank.text = "Storm Out";
             //Storm Out
         }
         else if (score >= 5 && score < 7)
         {
-            stormRank.text = "Ok Storm";
             //Ok Storm
         }
         else if (score >= 7 && score < 9)
         {
-            stormRank.text = "Good Storm";
             //Good Storm
         }
         else if(score ==9)
         {
-            stormRank.text = "Epic Storm";
             //Epic Storm
         }else if(score == 10)
         {
-            stormRank.text = "Perfect Storm";
             //Perfect Storm
         }
 
-        if (timer > 10)
+        if (timer > 5)
         {
             SceneManager.LoadScene(0);
         }
