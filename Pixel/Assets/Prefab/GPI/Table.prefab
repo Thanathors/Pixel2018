@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114448515771407200}
   - component: {fileID: 65909902208806712}
   - component: {fileID: 54041035169491592}
+  - component: {fileID: 114603905468871360}
   m_Layer: 0
   m_Name: Table
   m_TagString: Untagged
@@ -39,8 +40,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1256596559451946}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.17, y: 1.55, z: -19.82}
-  m_LocalScale: {x: 3.5503027, y: 1, z: 1.6000282}
+  m_LocalPosition: {x: -26.243765, y: 1.55, z: -2.535}
+  m_LocalScale: {x: 2.246018, y: 1, z: 1.5793408}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1415,14 +1416,25 @@ MonoBehaviour:
   m_selectedFaces: 00000000
   m_SelectedEdges:
   - x: 0
+    y: 1
+  - x: 2
     y: 0
-  - x: 0
-    y: 0
-  - x: 0
-    y: 0
-  - x: 0
-    y: 0
-  m_selectedTriangles: 000000000000000000000000000000000000000000000000
+  - x: 1
+    y: 3
+  - x: 3
+    y: 2
+  m_selectedTriangles: 000000000100000002000000010000000300000002000000
+--- !u!114 &114603905468871360
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1256596559451946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce80fed4d505c274eb4e6f73d439ba6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114859106442084200
 MonoBehaviour:
   m_ObjectHideFlags: 1

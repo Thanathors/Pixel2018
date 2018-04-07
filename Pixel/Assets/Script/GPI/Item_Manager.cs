@@ -11,7 +11,11 @@ public class Item_Manager : MonoBehaviour {
     private Shader base_shader;
     private Shader highlight_shader;
     public AudioClip SoundToPlayWhenPunched;
+    public AudioClip SoundToPlayWhenThrown;
     AudioSource m_audio;
+
+    [ReadOnly]
+    public bool IsThrown;
 
     void Start ()
     {
@@ -47,6 +51,26 @@ public class Item_Manager : MonoBehaviour {
             if (gameObject.GetComponent<Renderer>())
             {
                 gameObject.transform.gameObject.GetComponent<Renderer>().material.shader = base_shader;
+            }
+        }
+
+        if(player.GetComponent<Item_Pick_Drop>().ItemBeingHeld != null && player.GetComponent<Item_Pick_Drop>().ItemBeingHeld == gameObject)
+        {
+            GetComponent<Collider>().enabled = false;
+        }
+
+        else
+        {
+            GetComponent<Collider>().enabled = true;
+        }
+
+        if(IsThrown)
+        {
+            if (!m_audio.isPlaying && SoundToPlayWhenThrown != null)
+            {
+                m_audio.clip = SoundToPlayWhenThrown;
+                m_audio.Play();
+                IsThrown = false;
             }
         }
 

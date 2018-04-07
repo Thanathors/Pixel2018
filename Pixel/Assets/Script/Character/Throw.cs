@@ -12,12 +12,11 @@ public class Throw : MonoBehaviour {
     [Range(0, 30)]
     public float ThrowForce;
 
-
     void Start ()
     {
         dir = GameObject.Find("ThrowDirection");
         m_Anim = GetComponent<Animator>();
-	}
+    }
 	
 	void Update ()
     {
@@ -36,8 +35,8 @@ public class Throw : MonoBehaviour {
             item.GetComponent<Rigidbody>().isKinematic = false;
             item.gameObject.transform.parent = null;
             item.GetComponent<Rigidbody>().AddForce((Camera.main.transform.forward) * ThrowForce, ForceMode.Impulse);
+            item.GetComponent<Item_Manager>().IsThrown = true;
         }
-
         animated = false;
     }
 }
