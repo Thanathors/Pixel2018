@@ -97,11 +97,37 @@ public class Main_Menu_Controller : MonoBehaviour {
                     title = "Take This!";
                     text = "Break a lot of thing in the house.";
                 }
+                if(i == 10)
+                {
+                    title = "Hidden";
+                    text = "It's well hidden in the game... Can you find it?";
+                }
+                if(i == 11)
+                {
+                    title = "Hidden";
+                    text = "It's well hidden in the game... Can you find it?";
+                }
                 if (i == 12)
                 {
                     title = "In fire!";
-                    text = "Have your momentum to it's maximum.";
+                    text = "It's well hidden in the game... Can you find it?";
                 }
+                if (i == 13)
+                {
+                    title = "Hidden";
+                    text = "It's well hidden in the game... Can you find it?";
+                }
+                if (i == 14)
+                {
+                    title = "Hidden";
+                    text = "It's well hidden in the game... Can you find it?";
+                }
+                if (i == 15)
+                {
+                    title = "Hidden";
+                    text = "It's well hidden in the game... Can you find it?";
+                }
+
 
                 GameObject.Find("Achievement" + i).transform.GetChild(0).GetComponent<Text>().text = title;
                 GameObject.Find("Achievement" + i).transform.GetChild(1).GetComponent<Text>().text = text;
